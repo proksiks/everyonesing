@@ -72,6 +72,9 @@ class AudioPlayer {
     this.loadSong(this.currentIndex, false); // без автоплея
     this.bindEvents();
     this.loadAllDurations();
+    
+    // Добавляем обработчик изменения размера окна
+    window.addEventListener('resize', () => this.handleResize());
   }
 
   createPlayer() {
@@ -116,6 +119,11 @@ class AudioPlayer {
           <div class="examples__player-sub-title">Другие примеры</div>
 
           <ul class="examples__player-composition-list"></ul>
+
+          <a class="examples__player-button button button_gradient" href="#">
+              <img src="/public/images/icons/mic.svg" alt="Микрофон">
+              Заказать песню
+          </a>
         </div>
         <div class="examples__content">
           <h3 class="examples__content-title"></h3>
@@ -268,6 +276,7 @@ class AudioPlayer {
       decorateElement.style.background = song.color;
     }
 
+    this.currentSongText = song.text; // Сохраняем текст песни
     this.updateStoryText(song.text);
 
     this.audio.src = song.audio;
@@ -309,15 +318,40 @@ class AudioPlayer {
     if (text.length > maxLength) {
       this.contentText.textContent = text.substring(0, maxLength) + "...";
       this.contentMoreButton.classList.add("_show");
-      this.contentMoreButton.onclick = () => {
-        this.contentText.textContent = text;
-        this.contentMoreButton.classList.remove("_show");
-      };
+      
+      // Проверяем ширину экрана и устанавливаем соответствующую логику
+      if (window.innerWidth < 1280) {
+        // На мобильных устройствах скрываем весь текст и показываем только кнопку
+        this.contentText.classList.remove("_show");
+        this.contentMoreButton.onclick = () => {
+          this.contentText.textContent = text;
+          this.contentText.classList.add("_show");
+          this.contentMoreButton.classList.remove("_show");
+        };
+      } else {
+        // На больших экранах показываем укороченный текст и кнопку "читать полностью"
+        this.contentText.classList.add("_show");
+        this.contentMoreButton.onclick = () => {
+          this.contentText.textContent = text;
+          this.contentMoreButton.classList.remove("_show");
+        };
+      }
     } else {
       this.contentText.textContent = text;
       this.contentMoreButton.classList.remove("_show");
-      this.contentText.textContent = text;
+      this.contentText.classList.add("_show");
       this.contentMoreButton.onclick = null;
+      
+      // Для короткого текста также проверяем ширину экрана
+      if (window.innerWidth < 1280) {
+        this.contentText.classList.remove("_show");
+        this.contentMoreButton.classList.add("_show");
+        this.contentMoreButton.onclick = () => {
+          this.contentText.textContent = text;
+          this.contentText.classList.add("_show");
+          this.contentMoreButton.classList.remove("_show");
+        };
+      }
     }
   }
 
@@ -387,6 +421,13 @@ class AudioPlayer {
   updateProgress() {
     const percent = (this.audio.currentTime / this.audio.duration) * 100;
     this.progressBar.style.width = `${percent || 0}%`;
+  }
+  
+  handleResize() {
+    // Обновляем отображение текста в зависимости от ширины экрана
+    if (this.currentSongText) {
+      this.updateStoryText(this.currentSongText);
+    }
   }
 }
 

@@ -18,7 +18,7 @@
   max-width: 72.6875rem;
   padding: 0 5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .hero__content {
     padding: 0 1rem;
   }
