@@ -55,7 +55,16 @@
   padding-left: 2.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease;
 }
+
+.steps__step--hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
 .steps__step._active .steps__step-title {
   color: var(--color-red);
 }
@@ -112,15 +121,15 @@
 }
 
 .steps__step-music-step-1 {
-  width: 260px;
-  height: 40px;
+  width: 340px;
+  height: 60px;
   background-color: transparent;
   border: none;
 }
 
 .steps__step-music-step-2 {
-  width: 260px;
-  height: 40px;
+  width: 340px;
+  height: 60px;
   background-color: transparent;
   border: none;
 }
@@ -131,11 +140,19 @@
   position: absolute;
   right: 0;
   top: 0;
+  width: 50%;
 }
 
 .steps__image {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
+
 .steps__image._active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }

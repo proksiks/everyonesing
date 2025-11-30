@@ -140,3 +140,95 @@ function initStepsAudioVisualizer() {
 }
 
 document.addEventListener("DOMContentLoaded", initStepsAudioVisualizer);
+
+function initStepsAnimation() {
+  const stepsContainer = document.querySelector(".steps");
+  if (!stepsContainer) return;
+
+  const steps = Array.from(document.querySelectorAll(".steps__step"));
+  const images = Array.from(document.querySelectorAll(".steps__image"));
+
+  if (!steps.length) return;
+
+  steps.forEach((step) => {
+    step.classList.add("steps__step--hidden");
+  });
+  images.forEach((img) => img.classList.remove("_active"));
+  steps[0].classList.remove("steps__step--hidden");
+  steps[0].classList.add("_active");
+  if (images[0]) images[0].classList.add("_active");
+
+  function showActiveStep(index) {
+    steps.forEach((step, i) => {
+      if (i === index) {
+        step.classList.remove("steps__step--hidden");
+        step.classList.add("_active");
+      } else {
+        step.classList.remove("_active");
+      }
+    });
+
+    images.forEach((img, i) => {
+      if (i === index) {
+        img.classList.add("_active");
+      } else {
+        img.classList.remove("_active");
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const viewportCenter = window.innerHeight / 2;
+
+        let closestIndex = 0;
+        let closestDist = Infinity;
+
+        steps.forEach((step, index) => {
+          const rect = step.getBoundingClientRect();
+          const stepCenter = rect.top + rect.height / 2;
+          const dist = Math.abs(stepCenter - viewportCenter);
+
+          if (dist < closestDist) {
+            closestDist = dist;
+            closestIndex = index;
+          }
+        });
+
+        showActiveStep(closestIndex);
+      });
+    },
+    {
+      root: null,
+      threshold: 0.2,
+    }
+  );
+
+  observer.observe(stepsContainer);
+
+  window.addEventListener("scroll", () => {
+    const rect = stepsContainer.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+
+    const viewportCenter = window.innerHeight / 2;
+    let closestIndex = 0;
+    let closestDist = Infinity;
+
+    steps.forEach((step, index) => {
+      const r = step.getBoundingClientRect();
+      const stepCenter = r.top + r.height / 2;
+      const dist = Math.abs(stepCenter - viewportCenter);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closestIndex = index;
+      }
+    });
+
+    showActiveStep(closestIndex);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initStepsAnimation);
