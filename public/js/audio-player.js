@@ -3,8 +3,8 @@ const songsData = [
   {
     title: "Песня мужу",
     name: "Мария",
-    audio: "/public/audio/music-1.mp3",
-    image: "/public/images/examples/cover.png",
+    audio: "./public/audio/music-1.mp3",
+    image: "./public/images/examples/cover.png",
     date: "12 ноября 2025",
     color: "#EF0105",
     text: "Мужа зовут Вова, называю его «муженька». Познакомились когда он переехал к нам жить, мне было тогда 12 лет, потом немного подросла и в 14 начались наши отношения 🙊 Хочу упомянуть рождения нашего сына Миши 19.05.202 этот день полностью поменял нашу жизнь🙏🏽 Я хочу выразить всю свою любовь к этому человеку, мы вместе 11 год, через многое прошли, и уверена ещё много всего прекрасного будет в нашей жизни, мы обязательно справимся со всеми проблемами, заведем собаку, сделаем ремонт мечты в нашем доме, и у нас обязательно будет ещё и голубоглазая малышка👧🏼 Ценю его отношение к семье, доброту и заботу…..",
@@ -13,8 +13,8 @@ const songsData = [
   {
     title: "Песня жене",
     name: "Андрей",
-    audio: "/public/audio/music-2.mp3",
-    image: "/public/images/examples/ex.png",
+    audio: "./public/audio/music-2.mp3",
+    image: "./public/images/examples/ex.png",
     date: "15 ноября 2025",
     color: "#FF0C59",
     text: "Моя жена - это самый родной и близкий человек для меня. Мы вместе уже много лет, и каждый день с ней - это настоящее счастье. Она поддерживает меня в трудные моменты и радуется со мной в моменты радости. Я не представляю свою жизнь без нее. Эта песня - мое признание в любви и благодарность за все, что она для меня делает.",
@@ -23,8 +23,8 @@ const songsData = [
   {
     title: "Песня жене",
     name: "Андрей",
-    audio: "/public/audio/music-2.mp3",
-    image: "/public/images/examples/ex.png",
+    audio: "./public/audio/music-2.mp3",
+    image: "./public/images/examples/ex.png",
     date: "15 ноября 2025",
     color: "#FF4400",
     text: "Моя жена - это самый родной и близкий человек для меня. Мы вместе уже много лет, и каждый день с ней - это настоящее счастье. Она поддерживает меня в трудные моменты и радуется со мной в моменты радости. Я не представляю свою жизнь без нее. Эта песня - мое признание в любви и благодарность за все, что она для меня делает.",
@@ -33,8 +33,8 @@ const songsData = [
   {
     title: "Песня жене",
     name: "Андрей",
-    audio: "/public/audio/music-2.mp3",
-    image: "/public/images/examples/ex.png",
+    audio: "./public/audio/music-2.mp3",
+    image: "./public/images/examples/ex.png",
     date: "15 ноября 2025",
     color: "#4971FC",
     text: "Моя жена - это самый родной и близкий человек для меня. Мы вместе уже много лет, и каждый день с ней - это настоящее счастье. Она поддерживает меня в трудные моменты и радуется со мной в моменты радости. Я не представляю свою жизнь без нее. Эта песня - мое признание в любви и благодарность за все, что она для меня делает.",
@@ -43,8 +43,8 @@ const songsData = [
   {
     title: "Песня жене",
     name: "Андрей",
-    audio: "/public/audio/music-2.mp3",
-    image: "/public/images/examples/ex.png",
+    audio: "./public/audio/music-2.mp3",
+    image: "./public/images/examples/ex.png",
     date: "15 ноября 2025",
     color: "#88b58b",
     text: "Моя жена - это самый родной и близкий человек для меня. Мы вместе уже много лет, и каждый день с ней - это настоящее счастье. Она поддерживает меня в трудные моменты и радуется со мной в моменты радости. Я не представляю свою жизнь без нее. Эта песня - мое признание в любви и благодарность за все, что она для меня делает.",
@@ -99,19 +99,19 @@ class AudioPlayer {
           <div class="examples__player-timer">
             <div class="examples__player-timer-bar">
               <button class="examples__player-prev" type="button">
-                <img src="/public/images/examples/icons/prev.svg" alt="Предыдущая песня">
+                <img src="./public/images/examples/icons/prev.svg" alt="Предыдущая песня">
               </button>
               <div class="examples__player-timer-progress">
                 <span class="examples__player-timer-progress-line" style="width: 0%;"></span>
               </div>
               <button class="examples__player-next" type="button">
-                <img src="/public/images/examples/icons/next.svg" alt="Следующая песня">
+                <img src="./public/images/examples/icons/next.svg" alt="Следующая песня">
               </button>
             </div>
             <button class="examples__player-timer-button" type="button">
-              <img class="examples__player-timer-button-icon _show" src="/public/images/icons/play.svg"
+              <img class="examples__player-timer-button-icon _show" src="./public/images/icons/play.svg"
                    alt="Включить песню">
-              <img class="examples__player-timer-button-icon" src="/public/images/icons/pause.svg"
+              <img class="examples__player-timer-button-icon" src="./public/images/icons/pause.svg"
                    alt="Пауза">
             </button>
           </div>
@@ -121,7 +121,7 @@ class AudioPlayer {
           <ul class="examples__player-composition-list"></ul>
 
           <a class="examples__player-button button button_gradient" href="#">
-              <img src="/public/images/icons/mic.svg" alt="Микрофон">
+              <img src="./public/images/icons/mic.svg" alt="Микрофон">
               Заказать песню
           </a>
         </div>
@@ -190,8 +190,8 @@ class AudioPlayer {
           <div class="examples__player-composition-cover">
             <img width="53" height="53" class="examples__player-composition-cover-img" src="${song.image}" alt="Картинка">
             <button class="examples__player-composition-cover-button" data-index="${index}">
-              <img class="examples__player-composition-cover-button-icon _show" src="/public/images/icons/play.svg" alt="Включить песню">
-              <img class="examples__player-composition-cover-button-icon" src="/public/images/icons/pause.svg" alt="Пауза">
+              <img class="examples__player-composition-cover-button-icon _show" src="./public/images/icons/play.svg" alt="Включить песню">
+              <img class="examples__player-composition-cover-button-icon" src="./public/images/icons/pause.svg" alt="Пауза">
             </button>
           </div>
           <div class="examples__player-composition-content">

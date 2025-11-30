@@ -28,6 +28,14 @@
   color: var(--color-red);
   max-width: 55rem;
 }
+@media (max-width: 860px) {
+  .examples__head-title {
+    font-size: 1.75rem;
+  }
+  .examples__head-text {
+    font-size: 1.25rem;
+  }
+}
 .examples__body {
   display: flex;
   overflow: hidden;
@@ -349,7 +357,7 @@
   position: absolute;
   bottom: 5rem;
   right: 0;
-  background-image: url("/public/images/icons/quote.svg");
+  background-image: url("./public/images/icons/quote.svg");
   width: 7.5625rem;
   height: 5.8125rem;
 }
