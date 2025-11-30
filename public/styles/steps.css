@@ -8,6 +8,12 @@
   }
 }
 
+@media (max-width: 860px) {
+  .steps {
+    margin-top: 5rem;
+  }
+}
+
 .steps__step-button {
   cursor: pointer;
   background-color: transparent;
@@ -39,6 +45,12 @@
   font-weight: 600;
   line-height: 1.2;
   color: #2b2b2d;
+  margin: 0;
+}
+@media (max-width: 860px) {
+  .steps__title {
+    font-size: 1.75rem;
+  }
 }
 .steps__text {
   font-size: 2.25rem;
@@ -46,6 +58,11 @@
   line-height: 1.1;
   color: var(--color-red);
   max-width: 45rem;
+}
+@media (max-width: 860px) {
+  .steps__text {
+    font-size: 1.25rem;
+  }
 }
 .steps__body {
   max-width: 43.75rem;
@@ -60,6 +77,13 @@
   transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease;
 }
 
+@media (max-width: 860px) {
+  .steps__step {
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+}
 .steps__step--hidden {
   opacity: 0;
   transform: translateY(20px);
@@ -98,16 +122,33 @@
   font-weight: 700;
   transition: color 0.3s ease;
 }
+@media (max-width: 860px) {
+  .steps__step-title {
+    font-size: 1.75rem;
+  }
+}
 .steps__step-text {
   font-size: 1.25rem;
   line-height: 1.4;
   font-weight: 500;
+  margin: 0;
+  margin-top: 1rem;
+}
+@media (max-width: 860px) {
+  .steps__step-text {
+    font-size: 1rem;
+  }
 }
 .steps__step-prompt {
   font-size: 1.25rem;
   line-height: 1.4;
   margin-top: 1.5rem;
   color: rgba(43, 43, 45, 0.6);
+}
+@media (max-width: 860px) {
+  .steps__step-prompt {
+    font-size: 1rem;
+  }
 }
 .steps__step-button {
 }
@@ -133,6 +174,14 @@
   background-color: transparent;
   border: none;
 }
+
+@media (max-width: 480px) {
+  .steps__step-music-step-1,
+  .steps__step-music-step-2 {
+    width: 13.75rem;
+  }
+}
+
 .stepst__wrapper {
   position: relative;
 }
@@ -142,7 +191,11 @@
   top: 0;
   width: 50%;
 }
-
+@media (max-width: 920px) {
+  .steps__images {
+    display: none;
+  }
+}
 .steps__image {
   position: absolute;
   top: 0;
@@ -151,8 +204,17 @@
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s ease;
 }
+.steps__image img {
+  width: 100%;
+}
 
 .steps__image._active {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 480px) {
+  .steps__step-content {
+    transition: max-height 0.3s ease;
+  }
 }
