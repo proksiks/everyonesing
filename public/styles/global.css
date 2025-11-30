@@ -1,0 +1,78 @@
+:root {
+  --color-red: #c61a02;
+  --color-gray: #a1a1a1;
+}
+
+@font-face {
+  font-family: "Cygre";
+  src: url("../fonts/Cygre-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cygre";
+  src: url("../fonts/Cygre-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cygre";
+  src: url("../fonts/Cygre-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cygre";
+  src: url("../fonts/Cygre-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Cygre", Arial, sans-serif;
+}
+
+.button {
+  font-weight: 500;
+  line-height: 1;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 1rem 1.5rem;
+  border-radius: 2.25rem;
+  transition: transform 0.2s ease;
+}
+.button:hover {
+  transform: scale(1.05);
+}
+.button:active {
+  transform: scale(0.98);
+}
+.button_gradient {
+  color: white;
+  background: radial-gradient(
+    137.32% 418.97% at 120.77% 100%,
+    #e5063c 6.14%,
+    #fd752b 51.09%,
+    #f32a8b 96.96%
+  );
+}
