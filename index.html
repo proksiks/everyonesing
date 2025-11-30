@@ -141,50 +141,71 @@
                 </p>
             </div>
 
-            <div class="steps__body">
-                <div class="steps__step">
-                    <h3 class="steps__step-title">Шаг 1</h3>
-                    <p class="steps__step-text">
-                        Мы отправим вам простую инструкцию по записи голоса при помощи вашего смартфона.
-                        <b>Вам совсем не нужно уметь петь!</b>
-                    </p>
+            <div class="stepst__wrapper">
+                <div class="steps__body">
+                    <div class="steps__step _active">
+                        <button class="steps__step-title">Шаг 1</button>
 
-                    <span class="steps__step-prompt">Пример такой записи:</span>
-                    <div class="steps__step-music">
-                        <button class="steps__step-button" type="button">
-                            <img class="steps__step-button-icon _show" src="./public/images/icons/play.svg"
-                                alt="Включить песню">
-                            <img class="steps__step-button-icon" src="./public/images/icons/pause.svg" alt="Пауза">
-                        </button>
-                        <audio class="steps__step-audio-1"
-                            src="https://everyonesing.ru/wp-content/uploads/2025/09/Пример-записи.mp3"></audio>
-                        <canvas class="steps__step-music-step-1"></canvas>
+                        <div class="steps__step-content">
+                            <p class="steps__step-text">
+                                Мы отправим вам простую инструкцию по записи голоса при помощи вашего смартфона.
+                                <b>Вам совсем не нужно уметь петь!</b>
+                            </p>
+
+                            <span class="steps__step-prompt">Пример такой записи:</span>
+                            <div class="steps__step-music">
+                                <button class="steps__step-button" type="button">
+                                    <img class="steps__step-button-icon _show" src="./public/images/icons/play.svg"
+                                        alt="Включить песню">
+                                    <img class="steps__step-button-icon" src="./public/images/icons/pause.svg"
+                                        alt="Пауза">
+                                </button>
+                                <audio class="steps__step-audio-1"
+                                    src="https://everyonesing.ru/wp-content/uploads/2025/09/Пример-записи.mp3"></audio>
+                                <canvas class="steps__step-music-step-1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="steps__step">
+                        <button class="steps__step-title">Шаг 2</button>
+                        <div class="steps__step-content">
+                            <p class="steps__step-text">
+                                Наши профессиональные вокалисты записывают песню, а далее с помощью нашей технологии
+                                <b>мы меняем их голос на ВАШ!</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="steps__step">
+                        <button class="steps__step-title">Шаг 3</button>
+                        <div class="steps__step-content">
+                            <p class="steps__step-text">
+                                Вы получаете готовую песню своим голосом и дарите её любимому человеку!
+                            </p>
+
+                            <span class="steps__step-prompt">Пример такой песни:</span>
+                            <div class="steps__step-music">
+                                <button class="steps__step-button" type="button">
+                                    <img class="steps__step-button-icon _show" src="./public/images/icons/play.svg"
+                                        alt="Включить песню">
+                                    <img class="steps__step-button-icon" src="./public/images/icons/pause.svg"
+                                        alt="Пауза">
+                                </button>
+                                <audio class="steps__step-audio-2"
+                                    src="https://everyonesing.ru/wp-content/uploads/2025/09/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0.mp3"></audio>
+                                <canvas class="steps__step-music-step-2"></canvas>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="steps__step">
-                    <h3 class="steps__step-title">Шаг 2</h3>
-                    <p class="steps__step-text">
-                        Наши профессиональные вокалисты записывают песню, а далее с помощью нашей технологии
-                        <b>мы меняем их голос на ВАШ!</b>
-                    </p>
-                </div>
-                <div class="steps__step">
-                    <h3 class="steps__step-title">Шаг 1</h3>
-                    <p class="steps__step-text">
-                        Мы отправим вам простую инструкцию по записи голоса при помощи вашего смартфона.
-                        <b>Вам совсем не нужно уметь петь!</b>
-                    </p>
-
-                    <span class="steps__step-prompt">Пример такой записи:</span>
-                    <div class="steps__step-music">
-                        <button class="steps__step-button" type="button">
-                            <img class="steps__step-button-icon _show" src="./public/images/icons/play.svg"
-                                alt="Включить песню">
-                            <img class="steps__step-button-icon" src="./public/images/icons/pause.svg" alt="Пауза">
-                        </button>
-                        <audio class="steps__step-audio-2"
-                            src="https://everyonesing.ru/wp-content/uploads/2025/09/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0.mp3"></audio>
-                        <canvas class="steps__step-music-step-2"></canvas>
+                <div class="steps__images">
+                    <div class="steps__image _active">
+                        <img src="/public/images/steps/step-1.svg" alt="Картинка">
+                    </div>
+                    <div class="steps__image">
+                        <img src="/public/images/steps/step-2.svg" alt="Картинка">
+                    </div>
+                    <div class="steps__image">
+                        <img src="/public/images/steps/step-3.svg" alt="Картинка">
                     </div>
                 </div>
             </div>
