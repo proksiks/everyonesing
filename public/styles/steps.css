@@ -1,0 +1,113 @@
+.steps {
+  padding: 0 5rem;
+  margin-top: 10rem;
+}
+@media (max-width: 1280px) {
+  .steps {
+    padding: 0 1rem;
+  }
+}
+
+.steps__step-button {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+@media (max-width: 860px) {
+  .steps__step-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.steps__step-button-icon {
+  display: none;
+}
+.steps__step-button-icon._show {
+  display: block;
+}
+
+.steps__title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2b2b2d;
+}
+.steps__text {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-red);
+  max-width: 45rem;
+}
+.steps__body {
+  max-width: 43.75rem;
+}
+.steps__step {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.steps__step + .steps__step {
+  margin-top: 0.5rem;
+}
+.steps__step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.25rem;
+  height: 100%;
+  background-color: rgba(43, 43, 45, 0.5);
+  border-radius: 2.5rem;
+}
+
+.steps__step-title {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.steps__step-text {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.steps__step-prompt {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  color: rgba(43, 43, 45, 0.6);
+}
+.steps__step-button {
+}
+.steps__step-button-icon {
+}
+.steps__step-music {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.steps__step-music-step-1 {
+  width: 260px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.steps__step-music-step-2 {
+  width: 260px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}

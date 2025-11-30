@@ -1,4 +1,3 @@
-// Пример данных
 const songsData = [
   {
     title: "Песня мужу",
@@ -8,7 +7,7 @@ const songsData = [
     date: "12 ноября 2025",
     color: "#EF0105",
     text: "Мужа зовут Вова, называю его «муженька». Познакомились когда он переехал к нам жить, мне было тогда 12 лет, потом немного подросла и в 14 начались наши отношения 🙊 Хочу упомянуть рождения нашего сына Миши 19.05.202 этот день полностью поменял нашу жизнь🙏🏽 Я хочу выразить всю свою любовь к этому человеку, мы вместе 11 год, через многое прошли, и уверена ещё много всего прекрасного будет в нашей жизни, мы обязательно справимся со всеми проблемами, заведем собаку, сделаем ремонт мечты в нашем доме, и у нас обязательно будет ещё и голубоглазая малышка👧🏼 Ценю его отношение к семье, доброту и заботу…..",
-    duration: 0, // будет обновлено при загрузке аудио
+    duration: 0,
   },
   {
     title: "Песня жене",
@@ -18,7 +17,7 @@ const songsData = [
     date: "15 ноября 2025",
     color: "#FF0C59",
     text: "Моя жена - это самый родной и близкий человек для меня. Мы вместе уже много лет, и каждый день с ней - это настоящее счастье. Она поддерживает меня в трудные моменты и радуется со мной в моменты радости. Я не представляю свою жизнь без нее. Эта песня - мое признание в любви и благодарность за все, что она для меня делает.",
-    duration: 0, // будет обновлено при загрузке аудио
+    duration: 0,
   },
   {
     title: "Песня жене",
@@ -28,7 +27,7 @@ const songsData = [
     date: "15 ноября 2025",
     color: "#FF4400",
     text: "Моя жена - это самый родной и близкий человек для меня. Мы вместе уже много лет, и каждый день с ней - это настоящее счастье. Она поддерживает меня в трудные моменты и радуется со мной в моменты радости. Я не представляю свою жизнь без нее. Эта песня - мое признание в любви и благодарность за все, что она для меня делает.",
-    duration: 0, // будет обновлено при загрузке аудио
+    duration: 0,
   },
   {
     title: "Песня жене",
@@ -38,7 +37,7 @@ const songsData = [
     date: "15 ноября 2025",
     color: "#4971FC",
     text: "Моя жена - это самый родной и близкий человек для меня. Мы вместе уже много лет, и каждый день с ней - это настоящее счастье. Она поддерживает меня в трудные моменты и радуется со мной в моменты радости. Я не представляю свою жизнь без нее. Эта песня - мое признание в любви и благодарность за все, что она для меня делает.",
-    duration: 0, // будет обновлено при загрузке аудио
+    duration: 0,
   },
   {
     title: "Песня жене",
@@ -48,7 +47,7 @@ const songsData = [
     date: "15 ноября 2025",
     color: "#88b58b",
     text: "Моя жена - это самый родной и близкий человек для меня. Мы вместе уже много лет, и каждый день с ней - это настоящее счастье. Она поддерживает меня в трудные моменты и радуется со мной в моменты радости. Я не представляю свою жизнь без нее. Эта песня - мое признание в любви и благодарность за все, что она для меня делает.",
-    duration: 0, // будет обновлено при загрузке аудио
+    duration: 0,
   },
 ];
 
@@ -63,18 +62,19 @@ class AudioPlayer {
     this.currentIndex = 0;
     this.isPlaying = false;
     this.audio = new Audio();
+    this.isFullTextVisible = false;
+    this.fullText = "";
 
     this.init();
   }
 
   init() {
     this.createPlayer();
-    this.loadSong(this.currentIndex, false); // без автоплея
+    this.loadSong(this.currentIndex, false);
     this.bindEvents();
     this.loadAllDurations();
-    
-    // Добавляем обработчик изменения размера окна
-    window.addEventListener('resize', () => this.handleResize());
+
+    window.addEventListener("resize", () => this.handleResize());
   }
 
   createPlayer() {
@@ -215,14 +215,12 @@ class AudioPlayer {
       button.addEventListener("click", (e) => {
         const index = parseInt(e.currentTarget.getAttribute("data-index"), 10);
 
-        // Клик по другой композиции: переключаемся и сразу играем
         if (this.currentIndex !== index) {
           this.currentIndex = index;
-          this.loadSong(index, true); // автоплей
+          this.loadSong(index, true);
           return;
         }
 
-        // Клик по текущей: просто play/pause
         this.togglePlay();
       });
     });
@@ -232,7 +230,6 @@ class AudioPlayer {
     this.prevButton.addEventListener("click", () => this.prevSong());
     this.nextButton.addEventListener("click", () => this.nextSong());
     this.timerButton.addEventListener("click", () => {
-      // Большая кнопка управляет текущим треком
       this.togglePlay();
     });
 
@@ -276,13 +273,12 @@ class AudioPlayer {
       decorateElement.style.background = song.color;
     }
 
-    this.currentSongText = song.text; // Сохраняем текст песни
+    this.currentSongText = song.text;
     this.updateStoryText(song.text);
 
     this.audio.src = song.audio;
     this.audio.load();
 
-    // Если надо — сразу запускаем
     if (autoplay) {
       this.audio.play();
       this.isPlaying = true;
@@ -318,22 +314,41 @@ class AudioPlayer {
     if (text.length > maxLength) {
       this.contentText.textContent = text.substring(0, maxLength) + "...";
       this.contentMoreButton.classList.add("_show");
-      
-      // Проверяем ширину экрана и устанавливаем соответствующую логику
+
       if (window.innerWidth < 1280) {
-        // На мобильных устройствах скрываем весь текст и показываем только кнопку
         this.contentText.classList.remove("_show");
+        this.contentMoreButton.textContent = "Читать историю полностью";
+        this.isFullTextVisible = false;
+        this.fullText = text;
+
         this.contentMoreButton.onclick = () => {
-          this.contentText.textContent = text;
-          this.contentText.classList.add("_show");
-          this.contentMoreButton.classList.remove("_show");
+          if (!this.isFullTextVisible) {
+            this.contentText.textContent = this.fullText;
+            this.contentText.classList.add("_show");
+            this.contentMoreButton.textContent = "Скрыть историю";
+            this.isFullTextVisible = true;
+          } else {
+            this.contentText.classList.remove("_show");
+            this.contentMoreButton.textContent = "Читать историю полностью";
+            this.isFullTextVisible = false;
+          }
         };
       } else {
-        // На больших экранах показываем укороченный текст и кнопку "читать полностью"
         this.contentText.classList.add("_show");
+        this.contentMoreButton.textContent = "Читать историю полностью";
+        this.isFullTextVisible = false;
+        this.fullText = text;
+
         this.contentMoreButton.onclick = () => {
-          this.contentText.textContent = text;
-          this.contentMoreButton.classList.remove("_show");
+          if (!this.isFullTextVisible) {
+            this.contentText.textContent = this.fullText;
+            this.contentMoreButton.textContent = "Скрыть историю";
+            this.isFullTextVisible = true;
+          } else {
+            this.contentText.textContent = text.substring(0, maxLength) + "...";
+            this.contentMoreButton.textContent = "Читать историю полностью";
+            this.isFullTextVisible = false;
+          }
         };
       }
     } else {
@@ -341,23 +356,30 @@ class AudioPlayer {
       this.contentMoreButton.classList.remove("_show");
       this.contentText.classList.add("_show");
       this.contentMoreButton.onclick = null;
-      
-      // Для короткого текста также проверяем ширину экрана
+
       if (window.innerWidth < 1280) {
         this.contentText.classList.remove("_show");
         this.contentMoreButton.classList.add("_show");
+        this.contentMoreButton.textContent = "Читать историю полностью";
+        this.isFullTextVisible = false;
+        this.fullText = text;
+
         this.contentMoreButton.onclick = () => {
-          this.contentText.textContent = text;
-          this.contentText.classList.add("_show");
-          this.contentMoreButton.classList.remove("_show");
+          if (!this.isFullTextVisible) {
+            this.contentText.textContent = this.fullText;
+            this.contentText.classList.add("_show");
+            this.contentMoreButton.textContent = "Скрыть историю";
+            this.isFullTextVisible = true;
+          } else {
+            this.contentText.classList.remove("_show");
+            this.contentMoreButton.textContent = "Читать историю полностью";
+            this.isFullTextVisible = false;
+          }
         };
       }
     }
   }
 
-  // Единый метод, который синхронно обновляет:
-  // - иконки в списке треков
-  // - большую кнопку play/pause
   updateUIState() {
     const allButtons = this.container.querySelectorAll(
       ".examples__player-composition-cover-button"
@@ -371,18 +393,15 @@ class AudioPlayer {
       const playIcon = icons[0];
       const pauseIcon = icons[1];
 
-      // Все по умолчанию — play
       playIcon.classList.add("_show");
       pauseIcon.classList.remove("_show");
 
-      // Для текущего трека, если играет — показываем pause
       if (index === this.currentIndex && this.isPlaying) {
         playIcon.classList.remove("_show");
         pauseIcon.classList.add("_show");
       }
     });
 
-    // Обновляем большую кнопку
     if (this.isPlaying) {
       this.timerPlayIcon.classList.remove("_show");
       this.timerPauseIcon.classList.add("_show");
@@ -406,8 +425,7 @@ class AudioPlayer {
   prevSong(fromEnded = false) {
     this.currentIndex =
       (this.currentIndex - 1 + songsData.length) % songsData.length;
-    // Если предыдущий трек был в состоянии play (или вызов из ended),
-    // новый тоже должен начать играть.
+
     const shouldAutoplay = this.isPlaying || fromEnded;
     this.loadSong(this.currentIndex, shouldAutoplay);
   }
@@ -422,16 +440,14 @@ class AudioPlayer {
     const percent = (this.audio.currentTime / this.audio.duration) * 100;
     this.progressBar.style.width = `${percent || 0}%`;
   }
-  
+
   handleResize() {
-    // Обновляем отображение текста в зависимости от ширины экрана
     if (this.currentSongText) {
       this.updateStoryText(this.currentSongText);
     }
   }
 }
 
-// Инициализация плеера
 document.addEventListener("DOMContentLoaded", () => {
   const playerContainer = document.querySelector(".examples");
   if (playerContainer) {
@@ -439,7 +455,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Инициализация плеера
 document.addEventListener("DOMContentLoaded", () => {
   const playerContainer = document.querySelector(".examples");
   if (playerContainer) {

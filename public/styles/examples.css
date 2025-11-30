@@ -1,7 +1,6 @@
 .examples {
   padding: 0 5rem;
   margin-top: 10rem;
-  margin-bottom: 1250rem;
 }
 
 @media (max-width: 1280px) {
@@ -49,6 +48,8 @@
 
 .examples__content-img {
   object-fit: cover;
+  width: 100%;
+  border-radius: 0.75rem;
 }
 
 @media (max-width: 1280px) {
@@ -88,7 +89,7 @@
 }
 @media (max-width: 860px) {
   .examples__body-decorate {
-    top: -55%;
+    top: -50rem;
     height: 100vh;
   }
 }
@@ -106,6 +107,12 @@
   object-fit: cover;
   border-radius: 1rem;
 }
+@media (max-width: 860px) {
+  .examples__player-preview-img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .examples__player-info {
   color: #2b2b2d;
 }
@@ -114,10 +121,20 @@
   line-height: 1.2;
   font-weight: 700;
 }
+@media (max-width: 860px) {
+  .examples__player-title {
+    font-size: 1.75rem;
+  }
+}
 .examples__player-name {
   font-size: 1.25rem;
   line-height: 1.2;
   font-weight: 500;
+}
+@media (max-width: 860px) {
+  .examples__player-name {
+    font-size: 1.125rem;
+  }
 }
 .examples__player-timer {
   display: flex;
@@ -142,6 +159,12 @@
   height: 4rem;
   border-radius: 100%;
   overflow: hidden;
+}
+@media (max-width: 860px) {
+  .examples__player-timer-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 .examples__player-timer-button-icon {
   display: none;
@@ -334,6 +357,13 @@
     margin-top: 0;
   }
 }
+.examples__content-picture {
+  flex: 1;
+}
+.examples__content-body {
+  flex: 1;
+}
+
 .examples__content-more:hover {
   text-decoration: none;
 }
@@ -357,7 +387,7 @@
   position: absolute;
   bottom: 5rem;
   right: 0;
-  background-image: url("./public/images/icons/quote.svg");
+  background-image: url("/public/images/icons/quote.svg");
   width: 7.5625rem;
   height: 5.8125rem;
 }
