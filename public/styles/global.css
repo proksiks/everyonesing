@@ -83,10 +83,10 @@ body {
   color: var(--color-red);
   background-color: white;
 }
-
-.main-page {
-  margin-bottom: 75rem;
-}
 .overflow-hidden {
+  overflow: hidden;
+}
+
+.landing-page {
   overflow: hidden;
 }
