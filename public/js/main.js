@@ -6,4 +6,5 @@ import "./price.js";
 import "./price-audio-visualizer.js";
 import "./more-options-audio-visualizer.js";
 import "./more-options-slider.js";
+import "./reviews.js";
 import "./faq-accordion.js";
