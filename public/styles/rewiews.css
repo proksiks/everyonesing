@@ -259,6 +259,10 @@
   }
 }
 
+.reviews__mobile {
+  overflow: hidden;
+}
+
 .reviews__slider {
   position: relative;
   padding-bottom: 2.5rem;
@@ -272,6 +276,9 @@
 }
 .reviews__slider .swiper-slide {
   max-width: 25.625rem;
+}
+.reviews__slider .swiper-slide.swiper-slide-active {
+  z-index: 1;
 }
 .reviews__slider .swiper-slide:not(:last-child) {
   padding-right: 1.25rem;

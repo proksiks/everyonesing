@@ -16,3 +16,5 @@ function handleMediaChange(e) {
 
 handleMediaChange(mediaQuery);
 mediaQuery.addEventListener("change", handleMediaChange);
+
+Fancybox.bind("[data-fancybox]", {});
