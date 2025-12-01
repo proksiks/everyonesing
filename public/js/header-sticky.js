@@ -41,11 +41,10 @@ function initHeaderSticky() {
     mobileMenuDecorate.classList.add("hide");
 
     setTimeout(() => {
-      mobileMenuContent.style.display = "none";
+      mobileMenu.style.visibility = "hidden";
+      mobileMenu.style.opacity = "0";
       mobileMenuContent.classList.remove("hide");
-      mobileMenuDecorate.style.display = "none";
       mobileMenuDecorate.classList.remove("hide");
-      mobileMenu.style.display = "none";
       mobileMenuContent.style.transform = "";
       mobileMenuContent.style.opacity = "";
       mobileMenuDecorate.style.opacity = "";
@@ -60,6 +59,8 @@ function initHeaderSticky() {
     isMenuOpen = true;
     canSwipe = true;
 
+    mobileMenu.style.visibility = "visible";
+    mobileMenu.style.opacity = "1";
     mobileMenu.style.display = "flex";
     mobileMenuContent.style.display = "block";
     mobileMenuDecorate.style.display = "block";
@@ -100,9 +101,8 @@ function initHeaderSticky() {
   }
 
   function initMobileMenu() {
-    if (mobileMenu.style.display === "flex") {
-      mobileMenu.style.display = "none";
-    }
+    mobileMenu.style.visibility = "hidden";
+    mobileMenu.style.opacity = "0";
 
     mobileLeft.addEventListener("click", function (e) {
       e.preventDefault();
