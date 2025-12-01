@@ -139,8 +139,6 @@ function initStepsAudioVisualizer() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", initStepsAudioVisualizer);
-
 function initStepsAnimation() {
   const stepsContainer = document.querySelector(".steps");
   if (!stepsContainer) return;
@@ -231,66 +229,8 @@ function initStepsAnimation() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", initStepsAnimation);
-
-function initStepsAccordionMobile() {
-  const steps = Array.from(document.querySelectorAll(".steps__step"));
-  if (!steps.length) return;
-
-  function applyAccordionState() {
-    const isMobile = window.innerWidth < 480;
-
-    steps.forEach((step, index) => {
-      const titleBtn = step.querySelector(".steps__step-title");
-      const content = step.querySelector(".steps__step-content");
-      if (!titleBtn || !content) return;
-
-      content.style.removeProperty("max-height");
-      content.style.removeProperty("overflow");
-
-      if (isMobile) {
-        content.style.overflow = "hidden";
-
-        if (index === 0) {
-          content.style.maxHeight = content.scrollHeight + "px";
-          step.classList.add("_open");
-        } else {
-          content.style.maxHeight = "0px";
-          step.classList.remove("_open");
-        }
-
-        if (!titleBtn._accordionInited) {
-          titleBtn.addEventListener("click", () => {
-            const currentlyOpen = step.classList.contains("_open");
-
-            steps.forEach((s) => {
-              const c = s.querySelector(".steps__step-content");
-              if (!c) return;
-              c.style.maxHeight = "0px";
-              s.classList.remove("_open");
-            });
-
-            if (!currentlyOpen) {
-              content.style.maxHeight = content.scrollHeight + "px";
-              step.classList.add("_open");
-            }
-          });
-          titleBtn._accordionInited = true;
-        }
-      } else {
-        content.style.maxHeight = "none";
-        content.style.overflow = "visible";
-        step.classList.remove("_open");
-      }
-    });
-  }
-
-  applyAccordionState();
-  window.addEventListener("resize", () => {
-    applyAccordionState();
-  });
-}
-
+// Инициализация всех функций
 document.addEventListener("DOMContentLoaded", () => {
-  initStepsAccordionMobile();
+  initStepsAudioVisualizer();
+  initStepsAnimation();
 });
