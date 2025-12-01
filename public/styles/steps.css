@@ -44,7 +44,7 @@
   font-size: 3.5rem;
   font-weight: 600;
   line-height: 1.2;
-  color: #2b2b2d;
+  color: var(--color-gray-800);
   margin: 0;
 }
 @media (max-width: 860px) {
@@ -149,10 +149,6 @@
   .steps__step-prompt {
     font-size: 1rem;
   }
-}
-.steps__step-button {
-}
-.steps__step-button-icon {
 }
 .steps__step-music {
   margin-top: 0.75rem;

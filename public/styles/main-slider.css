@@ -45,6 +45,12 @@
     margin-top: 4rem;
   }
 }
+
+.main-slider-inner {
+  border-top: 0.125rem solid #e6e8ed;
+  border-bottom: 0.125rem solid #e6e8ed;
+}
+
 .main-slider {
   position: relative;
   margin-top: 4rem;

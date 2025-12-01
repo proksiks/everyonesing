@@ -1,0 +1,236 @@
+.price {
+  padding: 0 5rem;
+}
+@media (max-width: 1280px) {
+  .price {
+    padding: 0 1rem;
+  }
+}
+.price__wrapper {
+}
+.price__title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.price__sub-title {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin-top: 0.75rem;
+  color: var(--color-red);
+}
+.price__top {
+  margin-top: 4rem;
+}
+.price__top-cards {
+  display: flex;
+  gap: 1.25rem;
+}
+.price__top-card {
+  position: relative;
+  background-color: #edf0f4;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.price__top-card_gradient {
+  background: radial-gradient(
+    153.41% 157.2% at 116.26% 125.85%,
+    #e5063c 6.14%,
+    #fd752b 51.09%,
+    #f32a8b 96.96%
+  );
+  color: white;
+}
+.price__top-card-shield {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 2.5rem;
+  padding: 0.5rem 2.25rem;
+  font-size: 1.25rem;
+  background-color: var(--color-red);
+  color: white;
+  font-weight: 600;
+}
+.price__top-sup {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.price__top-title {
+  margin-top: 0.75rem;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.price__top-items {
+  margin-top: 1.5rem;
+}
+.price__top-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.price__top-icon img {
+  display: block;
+}
+.price__top-card_gradient .price__top-text {
+  color: white;
+}
+.price__top-text {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  color: #7d7d7d;
+  font-weight: 600;
+}
+.price__top-descr {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.price__top-descr + .price__top-descr {
+  margin-top: 0.5rem;
+}
+
+.price__top-box {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  border-radius: 1rem;
+  color: var(--color-gray-800);
+}
+.price__top-box-title {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.price__top-box-list li {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.price__top-box-list li + li {
+  margin-top: 0.5rem;
+}
+.price__top-list {
+  margin-bottom: 5rem;
+}
+.price__top-list-item {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.price__top-audio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+.price__top-button {
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+@media (max-width: 860px) {
+  .price__top-button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.price__top-button-icon {
+  display: none;
+}
+.price__top-button-icon._show {
+  display: block;
+}
+.price__top-canvas {
+}
+.price__top-canvas-sup {
+  color: rgba(43, 43, 45, 0.6);
+  display: block;
+}
+.price__top-canvas-progress {
+  display: block;
+  width: 22.5rem;
+  height: 2.5rem;
+}
+.price__top-price {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.price__top-price-left {
+  flex: 1;
+}
+.price__top-price-sup {
+  display: inline-block;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(43, 43, 45, 0.6);
+}
+.price__top-price-sup::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-7deg);
+  border-radius: 2.5rem;
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--color-red);
+}
+.price__top-price-number {
+  color: var(--color-red);
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.price__top-price-right {
+  flex: 1;
+}
+.price__top-price-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+.price__top-price-card-sup {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #7d7d7d;
+}
+.price__top-price-card-price {
+  margin-top: 0.625rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.price__top-price-big {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-top: auto;
+  margin-top: 0.75rem;
+}
+.price__top-footer {
+  margin-top: 2rem;
+}
+.price__top-footer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}

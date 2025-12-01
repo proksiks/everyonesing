@@ -1,6 +1,7 @@
 :root {
   --color-red: #c61a02;
   --color-gray: #a1a1a1;
+  --color-gray-800: #2b2b2d;
 }
 
 @font-face {
@@ -75,6 +76,10 @@ body {
     #fd752b 51.09%,
     #f32a8b 96.96%
   );
+}
+.button_white {
+  color: var(--color-red);
+  background-color: white;
 }
 
 .main-page {

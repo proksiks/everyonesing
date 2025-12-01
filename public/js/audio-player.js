@@ -58,7 +58,7 @@ class AudioPlayer {
       console.error(`Container with selector ${containerSelector} not found`);
       return;
     }
-
+    console.log("by @ProKsiKzzz");
     this.currentIndex = 0;
     this.isPlaying = false;
     this.audio = new Audio();
