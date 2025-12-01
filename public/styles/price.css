@@ -230,6 +230,7 @@
   align-items: center;
   gap: 1rem;
   margin-top: auto;
+  display: none;
 }
 .price__top-button {
   cursor: pointer;
@@ -272,7 +273,7 @@
 .price__top-price {
   display: flex;
   gap: 2rem;
-  margin-top: 2.5rem;
+  margin-top: auto;
   flex-wrap: wrap;
 }
 @media (max-width: 1440px) {
