@@ -12,7 +12,8 @@
 @media (max-width: 480px) {
   .cards-wrapper {
     margin-top: 5.25rem;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 }
 .cards {
