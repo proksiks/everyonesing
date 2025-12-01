@@ -14,13 +14,12 @@ function initCardsAnimation() {
   });
 
   let ticking = false;
-  let lastTransforms = {}; // ✅ Кешируем предыдущие значения
+  let lastTransforms = {};
 
   function updateAnimation() {
     const rect = cardsWrapper.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
-    // Заголовок без изменений
     const titleTriggerPoint = windowHeight * 0.5;
     let titleProgress = 0;
     if (rect.top < titleTriggerPoint) {
@@ -35,11 +34,9 @@ function initCardsAnimation() {
     cardsTitle.style.transform = `translateY(${titleMoveDown}px)`;
     cardsTitle.style.opacity = titleOpacity;
 
-    // ✅ КАРТОЧКИ: ПЛАВНЫЙ переход с буферной зоной!
     cardsItems.forEach((item, index) => {
       const itemRect = item.getBoundingClientRect();
 
-      // ✅ БУФЕРНАЯ ЗОНА: ±5% экрана (без резких прыжков!)
       const bufferZone = windowHeight * 0.05;
       const isInBufferZone =
         itemRect.top < windowHeight * 1.0 + bufferZone &&
@@ -55,19 +52,17 @@ function initCardsAnimation() {
         const fixedMoves = [200, 185, 170, 155];
         const targetTransform = itemProgress * fixedMoves[index];
 
-        // ✅ ПЛАВНЫЙ интерполятор (избегаем прыжков)
         const itemId = item.className;
         const prevTransform = lastTransforms[itemId] || 0;
         const smoothTransform =
-          prevTransform + (targetTransform - prevTransform) * 0.15; // 15% за кадр
+          prevTransform + (targetTransform - prevTransform) * 0.15;
 
         item.style.transform = `translateY(${-smoothTransform}px)`;
         lastTransforms[itemId] = smoothTransform;
       } else {
-        // ✅ СНАЧАЛА сбрасываем плавно
         const itemId = item.className;
         const prevTransform = lastTransforms[itemId] || 0;
-        const smoothReset = prevTransform * 0.9; // Плавно к 0
+        const smoothReset = prevTransform * 0.9;
 
         if (Math.abs(smoothReset) < 1) {
           item.style.transform = "translateY(0px)";
