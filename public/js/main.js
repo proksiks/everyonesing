@@ -8,3 +8,4 @@ import "./more-options-audio-visualizer.js";
 import "./more-options-slider.js";
 import "./reviews.js";
 import "./faq-accordion.js";
+import "./why.js";

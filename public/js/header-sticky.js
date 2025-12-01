@@ -24,7 +24,7 @@ function initHeaderSticky() {
   let scrollPosition = 0;
   let canSwipe = true;
   let swipeTimeout = null;
-  let initialScrollTop = 0; // ✅ Для проверки начала свайпа
+  let initialScrollTop = 0;
 
   function handleScroll() {
     if (window.scrollY > heroHeight) {
@@ -87,7 +87,7 @@ function initHeaderSticky() {
   }
 
   function canSwipeToClose() {
-    return mobileMenuContent.scrollTop <= 1 && canSwipe; // ✅ <=1 пиксель для точности
+    return mobileMenuContent.scrollTop <= 1 && canSwipe;
   }
 
   function blockSwipeTemporarily() {
@@ -150,13 +150,12 @@ function initHeaderSticky() {
       }
     });
 
-    // ✅ touchstart - запоминаем начальную прокрутку
     mobileMenuContent.addEventListener(
       "touchstart",
       function (e) {
         if (!isMenuOpen) return;
 
-        initialScrollTop = mobileMenuContent.scrollTop; // ✅ КЛЮЧЕВОЕ!
+        initialScrollTop = mobileMenuContent.scrollTop;
         startY = e.touches[0].clientY;
         currentY = startY;
         isDragging = true;
@@ -167,9 +166,8 @@ function initHeaderSticky() {
         }
       },
       { passive: true }
-    ); // ✅ passive: true!
+    );
 
-    // ✅ touchmove - БЕЗ preventDefault!
     mobileMenuContent.addEventListener(
       "touchmove",
       function (e) {
@@ -178,14 +176,12 @@ function initHeaderSticky() {
         currentY = e.touches[0].clientY;
         const dragDistance = currentY - startY;
 
-        // ✅ СВАЙП ТОЛЬКО если: вверху + НЕ было скролла + разрешено
         if (
           dragDistance > 0 &&
           initialScrollTop === 0 &&
           canSwipeToClose() &&
           mobileMenuContent.scrollTop <= 1
         ) {
-          // ✅ CSS overscroll-behavior сам блокирует скролл!
           mobileMenuContent.style.transform = `translateY(${dragDistance}px)`;
           mobileMenuContent.style.opacity = 1 - Math.min(dragDistance / 120, 1);
           mobileMenuDecorate.style.opacity =
@@ -193,7 +189,7 @@ function initHeaderSticky() {
         }
       },
       { passive: true }
-    ); // ✅ passive: true!
+    );
 
     mobileMenuContent.addEventListener(
       "touchend",
@@ -220,7 +216,6 @@ function initHeaderSticky() {
       { passive: true }
     );
 
-    // ✅ Отслеживание скролла
     let scrollTimeout = null;
     mobileMenuContent.addEventListener(
       "scroll",
