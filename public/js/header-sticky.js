@@ -72,6 +72,14 @@ function initHeaderSticky() {
       }
     });
 
+    // Close menu when clicking on links
+    const mobileMenuLinks = document.querySelectorAll(".mobile-menu__link");
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener("click", function() {
+        closeMobileMenu();
+      });
+    });
+
     document.addEventListener("click", function (e) {
       if (
         isMenuOpen &&
