@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 53.75rem;
   color: white;
   padding: 0 5rem;
   margin-top: -16%;
@@ -15,7 +15,7 @@
 @media (max-width: 1024px) {
   .gradient-block {
     margin-top: -25%;
-    min-height: 70vh;
+    min-height: 37.5rem;
   }
 }
 @media (max-width: 768px) {
