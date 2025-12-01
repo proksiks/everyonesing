@@ -219,14 +219,31 @@
     margin-top: 1rem;
   }
 }
+
+.examples__player-composition-list-wrapper {
+  max-height: 17.75rem;
+  overflow-y: auto;
+  margin-top: 2rem;
+}
+.examples__player-composition-list-wrapper::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.examples__player-composition-list-wrapper::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+.examples__player-composition-list-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--color-red);
+  border-radius: 0.5rem;
+}
+
 .examples__player-composition-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  margin-top: 2rem;
-  max-height: 17.75rem;
-  overflow-y: auto;
+  padding-right: 1.125rem;
 }
+
 .examples__player-composition-item {
   display: flex;
   align-items: center;
@@ -239,6 +256,13 @@
   align-items: center;
   width: 100%;
   gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.examples__player-composition-inner._active {
+  padding: 0.625rem 0.875rem;
+  background-color: white;
+  border-radius: 1rem;
 }
 
 .examples__player-composition-cover {
@@ -260,11 +284,19 @@
   align-items: center;
   justify-content: center;
 }
-
+.examples__player-composition-cover-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.375rem;
+  background-color: rgba(198, 26, 2, 0.38);
+}
 .examples__player-composition-cover-button-icon {
   width: 2rem;
   height: 2rem;
   display: none;
+  position: relative;
+  z-index: 1;
 }
 .examples__player-composition-cover-button-icon._show {
   display: block;

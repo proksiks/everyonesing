@@ -118,8 +118,9 @@ class AudioPlayer {
 
           <div class="examples__player-sub-title">Другие примеры</div>
 
-          <ul class="examples__player-composition-list"></ul>
-
+          <div class="examples__player-composition-list-wrapper">
+            <ul class="examples__player-composition-list"></ul>
+          </div>
           <a class="examples__player-button button button_gradient" href="#">
               <img src="./public/images/icons/mic.svg" alt="Микрофон">
               Заказать песню
@@ -205,6 +206,7 @@ class AudioPlayer {
     });
 
     this.bindCompositionButtons();
+    this.updateActiveComposition();
   }
 
   bindCompositionButtons() {
@@ -223,6 +225,20 @@ class AudioPlayer {
 
         this.togglePlay();
       });
+    });
+  }
+
+  updateActiveComposition() {
+    const allCompositions = this.container.querySelectorAll(
+      ".examples__player-composition-inner"
+    );
+
+    allCompositions.forEach((composition, index) => {
+      if (index === this.currentIndex) {
+        composition.classList.add("_active");
+      } else {
+        composition.classList.remove("_active");
+      }
     });
   }
 
@@ -287,6 +303,7 @@ class AudioPlayer {
     }
 
     this.updateUIState();
+    this.updateActiveComposition();
   }
 
   async loadAllDurations() {
@@ -425,7 +442,6 @@ class AudioPlayer {
   prevSong(fromEnded = false) {
     this.currentIndex =
       (this.currentIndex - 1 + songsData.length) % songsData.length;
-
     const shouldAutoplay = this.isPlaying || fromEnded;
     this.loadSong(this.currentIndex, shouldAutoplay);
   }
@@ -447,13 +463,6 @@ class AudioPlayer {
     }
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const playerContainer = document.querySelector(".examples");
-  if (playerContainer) {
-    new AudioPlayer(".examples");
-  }
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   const playerContainer = document.querySelector(".examples");
