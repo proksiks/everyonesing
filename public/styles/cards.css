@@ -189,11 +189,15 @@
   left: 25%;
   top: 52%;
 }
+@media (max-width: 1440px) {
+  .cards__bg {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 @media (max-width: 1280px) {
   .cards__bg {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
   }
   .cards__bg img {
     width: 100%;
