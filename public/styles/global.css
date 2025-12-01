@@ -52,6 +52,16 @@ body {
   font-family: "Cygre", Arial, sans-serif;
 }
 
+.main-page {
+  max-width: 2440px;
+  margin: 0 auto;
+}
+
+.main-section {
+  overflow: hidden;
+  padding-bottom: 2.5rem;
+}
+
 .button {
   font-weight: 500;
   line-height: 1;

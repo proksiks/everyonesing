@@ -2,14 +2,20 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 90vh;
+  min-height: 100vh;
   color: white;
   padding: 0 5rem;
-  margin-top: -9%;
+  margin-top: -16%;
 }
 @media (max-width: 1280px) {
   .gradient-block {
     padding: 0 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  .gradient-block {
+    margin-top: -25%;
+    min-height: 70vh;
   }
 }
 @media (max-width: 768px) {
@@ -25,15 +31,38 @@
 .gradient-block::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 75rem;
-  top: -25%;
-  left: 0;
-  background-image: url("../images/gradient/gradient-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 200%;
+  height: 70%;
+  top: 12%;
+  left: -50%;
+  background: radial-gradient(
+    97.44% 297.27% at 90.71% 85.72%,
+    #e5063c 6.14%,
+    #fd752b 51.09%,
+    #f32a8b 86.06%
+  );
+  filter: blur(5rem);
 }
 
+@media (max-width: 1440px) {
+  .gradient-block::before {
+    top: 0;
+    height: 80%;
+  }
+}
+@media (max-width: 1024px) {
+  .gradient-block::before {
+    height: 80%;
+    top: -5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gradient-block::before {
+    top: 12%;
+    filter: blur(3rem);
+  }
+}
 .gradient-block__title {
   position: relative;
   z-index: 2;
@@ -43,7 +72,7 @@
   letter-spacing: -0.2188rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .gradient-block__title {
     font-size: 2.25rem;
   }
