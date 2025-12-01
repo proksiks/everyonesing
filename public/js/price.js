@@ -1,6 +1,5 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
 
-// Инициализируем слайдер на разрешениях меньше 1440px
 const mediaQuery = window.matchMedia("(max-width: 1440px)");
 
 function handleMediaChange(e) {
