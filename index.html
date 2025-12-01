@@ -16,28 +16,28 @@
         <nav class="header__nav">
             <ul class="header__list">
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">Примеры</a>
+                    <a class="header__list-link" href="#examples">Примеры</a>
                 </li>
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">Процесс</a>
+                    <a class="header__list-link" href="#process">Процесс</a>
                 </li>
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">События</a>
+                    <a class="header__list-link" href="#events">События</a>
                 </li>
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">Цены</a>
+                    <a class="header__list-link" href="#price">Цены</a>
                 </li>
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">Доп. опции</a>
+                    <a class="header__list-link" href="#more-options">Доп. опции</a>
                 </li>
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">Отзывы</a>
+                    <a class="header__list-link" href="#rewiews">Отзывы</a>
                 </li>
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">О нас</a>
+                    <a class="header__list-link" href="#team">О нас</a>
                 </li>
                 <li class="header__list-item">
-                    <a class="header__list-link" href="#">FAQ</a>
+                    <a class="header__list-link" href="#faq">FAQ</a>
                 </li>
             </ul>
         </nav>
@@ -67,28 +67,28 @@
     <div class="header-sticky">
         <ul class="header-sticky__list">
             <li class="header-sticky__list-item">
-                <a class="header-sticky__item-link _active" href="#">Примеры</a>
+                <a class="header-sticky__item-link _active" href="#examples">Примеры</a>
             </li>
             <li class="header-sticky__list-item">
-                <a class="header-sticky__item-link" href="#">Процесс</a>
+                <a class="header-sticky__item-link" href="#process">Процесс</a>
             </li>
             <li class="header-sticky__list-item">
-                <a class="header-sticky__item-link" href="#">Поводы</a>
+                <a class="header-sticky__item-link" href="#events">События</a>
             </li>
             <li class="header-sticky__list-item">
-                <a class="header-sticky__item-link" href="#">Цены</a>
+                <a class="header-sticky__item-link" href="#price">Цены</a>
             </li>
             <li class="header-sticky__list-item">
-                <a class="header-sticky__item-link" href="#">Доп. опции</a>
+                <a class="header-sticky__item-link" href="#more-options">Доп. опции</a>
             </li>
             <li class="header-sticky__list-item">
-                <a class="header-sticky__item-link" href="#">Отзывы</a>
+                <a class="header-sticky__item-link" href="#rewiews">Отзывы</a>
             </li>
             <li class="header-sticky__list-item">
-                <a class="header-sticky__item-link" hre f="#">О нас</a>
+                <a class="header-sticky__item-link" href="#team">О нас</a>
             </li>
             <li class="header-sticky__list-item">
-                <a class="header-sticky__item-link" href="#">FAQ</a>
+                <a class="header-sticky__item-link" href="#faq">FAQ</a>
             </li>
         </ul>
         <div>
@@ -129,8 +129,8 @@
                 </div>
             </div>
         </div>
-        <div class="examples"></div>
-        <div class="steps">
+        <div class="examples" id="examples"></div>
+        <div class="steps" id="process">
             <div class="steps__head">
                 <h2 class="steps__title">Такого точно никто не дарил!</h2>
                 <p class="steps__text">
@@ -254,7 +254,7 @@
 
         <div class="main-slider-wrapper">
             <div class="main-slider-inner">
-                <h2 class="main-slider__title">
+                <h2 class="main-slider__title" id="events">
                     Мы часто слышим, что момент вручения песни стал
                     самым главным событием праздника!
                 </h2>
@@ -343,362 +343,643 @@
             </div>
         </div>
 
-        <div class="cards-wrapper">
-            <div class="cards">
-                <div class="cards__title">
-                    Почему именно <span>Споёт Каждый?</span>
-                </div>
+        <div class="overflow-hidden">
+            <div class="cards-wrapper">
+                <div class="cards">
+                    <div class="cards__title">
+                        Почему именно <span>Споёт Каждый?</span>
+                    </div>
 
-                <div class="cards__list">
-                    <div class="cards__item cards__item_1">
-                        <div class="cards__item-title">Большой выбор</div>
-                        <div class="cards__item-text">
-                            С гордостью говорим, что мы можем реализовать любую вашу задумку!
-                            Вашим голосом, голосом вокалиста, по вашим стихам, по референсу - всё это вы сможете
-                            обсудить с
-                            менеджером и подобрать лучший вариант!
+                    <div class="cards__list">
+                        <div class="cards__item cards__item_1">
+                            <div class="cards__item-title">Большой выбор</div>
+                            <div class="cards__item-text">
+                                С гордостью говорим, что мы можем реализовать любую вашу задумку!
+                                Вашим голосом, голосом вокалиста, по вашим стихам, по референсу - всё это вы сможете
+                                обсудить с
+                                менеджером и подобрать лучший вариант!
+                            </div>
+                        </div>
+                        <div class="cards__item cards__item_2">
+                            <div class="cards__item-title">С вниманием к деталям</div>
+                            <div class="cards__item-text">
+                                Расскажите 💬 нам свою историю или просто тезисно описываете о чем будет песня 😍
+                                Наши авторы с вниманием к деталям напишут текст ✍️ для вашей будущей песни!
+                            </div>
+                        </div>
+                        <div class="cards__item cards__item_3">
+                            <div class="cards__item-title">Уникальная технология!</div>
+                            <div class="cards__item-text">
+                                Мы единственная компания, которая предлагает такую магию создания песни 🎵 с вашим
+                                голосом.
+                            </div>
+                            <img class="cards__item-img" src="./public/images/cards/card_3.png" alt="Текст">
+                        </div>
+                        <div class="cards__item cards__item_4">
+                            <div class="cards__item-title">Гарантия качества</div>
+                            <div class="cards__item-text">
+                                Если вас не устроит результат, то мы просто вернём деньги. Без стресса.
+                            </div>
+                            <div class="cards__item-sup">
+                                Более 1000 человек получили свою песню, посмотрите, что они о нас пишут!
+                            </div>
+                            <button class="cards__item-button">
+                                Читать отзывы
+                            </button>
                         </div>
                     </div>
-                    <div class="cards__item cards__item_2">
-                        <div class="cards__item-title">С вниманием к деталям</div>
-                        <div class="cards__item-text">
-                            Расскажите 💬 нам свою историю или просто тезисно описываете о чем будет песня 😍
-                            Наши авторы с вниманием к деталям напишут текст ✍️ для вашей будущей песни!
-                        </div>
-                    </div>
-                    <div class="cards__item cards__item_3">
-                        <div class="cards__item-title">Уникальная технология!</div>
-                        <div class="cards__item-text">
-                            Мы единственная компания, которая предлагает такую магию создания песни 🎵 с вашим голосом.
-                        </div>
-                        <img class="cards__item-img" src="./public/images/cards/card_3.png" alt="Текст">
-                    </div>
-                    <div class="cards__item cards__item_4">
-                        <div class="cards__item-title">Гарантия качества</div>
-                        <div class="cards__item-text">
-                            Если вас не устроит результат, то мы просто вернём деньги. Без стресса.
-                        </div>
-                        <div class="cards__item-sup">
-                            Более 1000 человек получили свою песню, посмотрите, что они о нас пишут!
-                        </div>
-                        <button class="cards__item-button">
-                            Читать отзывы
-                        </button>
-                    </div>
-                </div>
 
-                <div class="cards__bg">
-                    <img src="./public/images/cards/cards_bg.svg" alt="Фон">
+                    <div class="cards__bg">
+                        <img src="./public/images/cards/cards_bg.svg" alt="Фон">
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="price">
-            <div class="price__wrapper">
-                <div class="price__title">Выбери свою авторскую песню!</div>
-                <div class="price__sub-title">От душевной песни в подарок до настоящего личного хита</div>
+            <div class="price" id="price">
+                <div class="price__wrapper">
+                    <div class="price__title">Выбери свою авторскую песню!</div>
+                    <div class="price__sub-title">От душевной песни в подарок до настоящего личного хита</div>
 
-                <div class="price__top">
-                    <div class="price__top-cards">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="price__top-card">
-                                    <div class="price__top-sup">Ваша история</div>
-                                    <div class="price__top-title">В исполнении вокалиста</div>
-                                    <div class="price__top-items">
-                                        <div class="price__top-item">
-                                            <div class="price__top-icon">
-                                                <img src="./public/images/icons/calendar.svg" alt="календарь">
+                    <div class="price__top">
+                        <div class="price__top-cards">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="price__top-card">
+                                        <div class="price__top-sup">Ваша история</div>
+                                        <div class="price__top-title">В исполнении вокалиста</div>
+                                        <div class="price__top-items">
+                                            <div class="price__top-item">
+                                                <div class="price__top-icon">
+                                                    <img src="./public/images/icons/calendar.svg" alt="календарь">
+                                                </div>
+                                                <div class="price__top-text">
+                                                    Срок исполнения: 7-10 дней (2-3 дня - срочно)
+                                                </div>
                                             </div>
-                                            <div class="price__top-text">
-                                                Срок исполнения: 7-10 дней (2-3 дня - срочно)
+                                            <div class="price__top-item">
+                                                <div class="price__top-icon">
+                                                    <img src="./public/images/icons/album.svg" alt="альбом">
+                                                </div>
+                                                <div class="price__top-text">
+                                                    Продолжительность песни: 2-3 мин.
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="price__top-item">
-                                            <div class="price__top-icon">
-                                                <img src="./public/images/icons/album.svg" alt="альбом">
-                                            </div>
-                                            <div class="price__top-text">
-                                                Продолжительность песни: 2-3 мин.
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="price__top-descr">
-                                        Индивидуальная песня по вашей истории, в которой прозвучат:
-                                    </div>
-                                    <ul class="price__top-list">
-                                        <li class="price__top-list-item">ваши имена;</li>
-                                        <li class="price__top-list-item">поздравление с событием;</li>
-                                        <li class="price__top-list-item">
-                                            важные факты, воспоминания, даты и все что захотите;
-                                        </li>
-                                    </ul>
-
-                                    <div class="price__top-audio">
-                                        <button class="price__top-button" type="button">
-                                            <img class="price__top-button-icon _show"
-                                                src="./public/images/icons/play.svg" alt="Включить песню">
-                                            <img class="price__top-button-icon" src="./public/images/icons/pause.svg"
-                                                alt="Пауза">
-                                        </button>
-                                        <div class="price__top-canvas">
-                                            <span class="price__top-canvas-sup">Пример такой записи:</span>
-                                            <audio>
-                                                <source
-                                                    src="https://everyonesing.ru/wp-content/uploads/2025/09/Пример-записи.mp3"
-                                                    type="audio/mpeg">
-                                            </audio>
-                                            <canvas class="price__top-canvas-progress"></canvas>
+                                        <div class="price__top-descr">
+                                            Индивидуальная песня по вашей истории, в которой прозвучат:
                                         </div>
-                                    </div>
-
-                                    <div class="price__top-price">
-                                        <div class="price__top-price-left">
-                                            <div class="price__top-price-sup">6 990 ₽</div>
-                                            <div class="price__top-price-number">4 990 ₽</div>
-                                        </div>
-                                        <div class="price__top-price-right">
-                                            <div class="price__top-price-card">
-                                                <div class="price__top-price-card-sup">Рассрочка</div>
-                                                <div class="price__top-price-card-price">2 500 ₽ × 4/6 мес.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="price__top-footer">
-                                        <a class="price__top-footer-button button button_gradient" href="#">
-                                            <img src="./public/images/icons/mic.svg" alt="Микрофон">
-                                            Заказать песню
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="price__top-card">
-                                    <div class="price__top-card-shield">Хит продаж</div>
-                                    <div class="price__top-sup">Ваша история</div>
-                                    <div class="price__top-title">Вашим голосом</div>
-                                    <div class="price__top-items">
-                                        <div class="price__top-item">
-                                            <div class="price__top-icon">
-                                                <img src="./public/images/icons/calendar.svg" alt="календарь">
-                                            </div>
-                                            <div class="price__top-text">
-                                                Срок исполнения: 7-10 дней (2-3 дня - срочно)
-                                            </div>
-                                        </div>
-                                        <div class="price__top-item">
-                                            <div class="price__top-icon">
-                                                <img src="./public/images/icons/album.svg" alt="альбом">
-                                            </div>
-                                            <div class="price__top-text">
-                                                Продолжительность песни: 2-3 мин.
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="price__top-descr">
-                                        Индивидуальная песня по вашей истории, которая прозвучит вашим голосом.
-                                    </div>
-                                    <div class="price__top-descr">
-                                        Для этого не нужно уметь петь, наши профессиональные вокалисты сделают это за
-                                        вас.
-                                    </div>
-
-                                    <div class="price__top-audio">
-                                        <button class="price__top-button" type="button">
-                                            <img class="price__top-button-icon _show"
-                                                src="./public/images/icons/play.svg" alt="Включить песню">
-                                            <img class="price__top-button-icon" src="./public/images/icons/pause.svg"
-                                                alt="Пауза">
-                                        </button>
-                                        <div class="price__top-canvas">
-                                            <span class="price__top-canvas-sup">Пример такой записи:</span>
-                                            <audio>
-                                                <source
-                                                    src="https://everyonesing.ru/wp-content/uploads/2025/09/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0.mp3"
-                                                    type="audio/mpeg">
-                                            </audio>
-                                            <canvas class="price__top-canvas-progress"></canvas>
-                                        </div>
-                                    </div>
-
-                                    <div class="price__top-price">
-                                        <div class="price__top-price-left">
-                                            <div class="price__top-price-sup">6 990 ₽</div>
-                                            <div class="price__top-price-number">4 990 ₽</div>
-                                        </div>
-                                        <div class="price__top-price-right">
-                                            <div class="price__top-price-card">
-                                                <div class="price__top-price-card-sup">Рассрочка</div>
-                                                <div class="price__top-price-card-price">2 500 ₽ × 4/6 мес.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="price__top-footer">
-                                        <a class="price__top-footer-button button button_gradient" href="#">
-                                            <img src="./public/images/icons/mic.svg" alt="Микрофон">
-                                            Заказать песню
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="price__top-card price__top-card_gradient">
-                                    <div class="price__top-sup">Максимум эмоций</div>
-                                    <div class="price__top-title">Ваш ХИТ</div>
-                                    <div class="price__top-items">
-                                        <div class="price__top-item">
-                                            <div class="price__top-icon">
-                                                <img src="./public/images/icons/calendar_white.svg" alt="календарь">
-                                            </div>
-                                            <div class="price__top-text">
-                                                Срок исполнения: индивидуально
-                                            </div>
-                                        </div>
-                                        <div class="price__top-item">
-                                            <div class="price__top-icon">
-                                                <img src="./public/images/icons/album_white.svg" alt="альбом">
-                                            </div>
-                                            <div class="price__top-text">
-                                                Продолжительность песни: любой
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="price__top-descr">
-                                        Для тех, кто хочет реализовать собственную творческую задумку вместе с командой
-                                        профессионалов
-                                    </div>
-                                    <div class="price__top-box">
-                                        <div class="price__top-box-title">
-                                            Идеально подойдет, если хотите:
-                                        </div>
-                                        <ul class="price__top-box-list">
-                                            <li>Сделать песню на основе уже существующей известной песни</li>
-                                            <li>Написать песню на основе ваших набросков текста/музыки</li>
-                                            <li>Согласовывать текст и полноценно участвовать в творческом процессе</li>
-                                            <li>Сделать уникальное поздравление «с приколом» в юмористическом стиле</li>
+                                        <ul class="price__top-list">
+                                            <li class="price__top-list-item">ваши имена;</li>
+                                            <li class="price__top-list-item">поздравление с событием;</li>
+                                            <li class="price__top-list-item">
+                                                важные факты, воспоминания, даты и все что захотите;
+                                            </li>
                                         </ul>
-                                    </div>
 
-                                    <div class="price__top-price-big">
-                                        от 16 990 ₽
-                                    </div>
+                                        <div class="price__top-audio">
+                                            <button class="price__top-button" type="button">
+                                                <img class="price__top-button-icon _show"
+                                                    src="./public/images/icons/play.svg" alt="Включить песню">
+                                                <img class="price__top-button-icon"
+                                                    src="./public/images/icons/pause.svg" alt="Пауза">
+                                            </button>
+                                            <div class="price__top-canvas">
+                                                <span class="price__top-canvas-sup">Пример такой записи:</span>
+                                                <audio>
+                                                    <source
+                                                        src="https://everyonesing.ru/wp-content/uploads/2025/09/Пример-записи.mp3"
+                                                        type="audio/mpeg">
+                                                </audio>
+                                                <canvas class="price__top-canvas-progress"></canvas>
+                                            </div>
+                                        </div>
 
-                                    <div class="price__top-footer">
-                                        <a class="price__top-footer-button button button_white" href="#">
-                                            <img src="./public/images/icons/mic_red.svg" alt="Микрофон">
-                                            Заказать песню
-                                        </a>
+                                        <div class="price__top-price">
+                                            <div class="price__top-price-left">
+                                                <div class="price__top-price-sup">6 990 ₽</div>
+                                                <div class="price__top-price-number">4 990 ₽</div>
+                                            </div>
+                                            <div class="price__top-price-right">
+                                                <div class="price__top-price-card">
+                                                    <div class="price__top-price-card-sup">Рассрочка</div>
+                                                    <div class="price__top-price-card-price">2 500 ₽ × 4/6 мес.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="price__top-footer">
+                                            <a class="price__top-footer-button button button_gradient" href="#">
+                                                <img src="./public/images/icons/mic.svg" alt="Микрофон">
+                                                Заказать песню
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="price__top-card">
+                                        <div class="price__top-card-shield">Хит продаж</div>
+                                        <div class="price__top-sup">Ваша история</div>
+                                        <div class="price__top-title">Вашим голосом</div>
+                                        <div class="price__top-items">
+                                            <div class="price__top-item">
+                                                <div class="price__top-icon">
+                                                    <img src="./public/images/icons/calendar.svg" alt="календарь">
+                                                </div>
+                                                <div class="price__top-text">
+                                                    Срок исполнения: 7-10 дней (2-3 дня - срочно)
+                                                </div>
+                                            </div>
+                                            <div class="price__top-item">
+                                                <div class="price__top-icon">
+                                                    <img src="./public/images/icons/album.svg" alt="альбом">
+                                                </div>
+                                                <div class="price__top-text">
+                                                    Продолжительность песни: 2-3 мин.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="price__top-descr">
+                                            Индивидуальная песня по вашей истории, которая прозвучит вашим голосом.
+                                        </div>
+                                        <div class="price__top-descr">
+                                            Для этого не нужно уметь петь, наши профессиональные вокалисты сделают это
+                                            за
+                                            вас.
+                                        </div>
+
+                                        <div class="price__top-audio">
+                                            <button class="price__top-button" type="button">
+                                                <img class="price__top-button-icon _show"
+                                                    src="./public/images/icons/play.svg" alt="Включить песню">
+                                                <img class="price__top-button-icon"
+                                                    src="./public/images/icons/pause.svg" alt="Пауза">
+                                            </button>
+                                            <div class="price__top-canvas">
+                                                <span class="price__top-canvas-sup">Пример такой записи:</span>
+                                                <audio>
+                                                    <source
+                                                        src="https://everyonesing.ru/wp-content/uploads/2025/09/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%B0.mp3"
+                                                        type="audio/mpeg">
+                                                </audio>
+                                                <canvas class="price__top-canvas-progress"></canvas>
+                                            </div>
+                                        </div>
+
+                                        <div class="price__top-price">
+                                            <div class="price__top-price-left">
+                                                <div class="price__top-price-sup">6 990 ₽</div>
+                                                <div class="price__top-price-number">4 990 ₽</div>
+                                            </div>
+                                            <div class="price__top-price-right">
+                                                <div class="price__top-price-card">
+                                                    <div class="price__top-price-card-sup">Рассрочка</div>
+                                                    <div class="price__top-price-card-price">2 500 ₽ × 4/6 мес.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="price__top-footer">
+                                            <a class="price__top-footer-button button button_gradient" href="#">
+                                                <img src="./public/images/icons/mic.svg" alt="Микрофон">
+                                                Заказать песню
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="price__top-card price__top-card_gradient">
+                                        <div class="price__top-sup">Максимум эмоций</div>
+                                        <div class="price__top-title">Ваш ХИТ</div>
+                                        <div class="price__top-items">
+                                            <div class="price__top-item">
+                                                <div class="price__top-icon">
+                                                    <img src="./public/images/icons/calendar_white.svg" alt="календарь">
+                                                </div>
+                                                <div class="price__top-text">
+                                                    Срок исполнения: индивидуально
+                                                </div>
+                                            </div>
+                                            <div class="price__top-item">
+                                                <div class="price__top-icon">
+                                                    <img src="./public/images/icons/album_white.svg" alt="альбом">
+                                                </div>
+                                                <div class="price__top-text">
+                                                    Продолжительность песни: любой
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="price__top-descr">
+                                            Для тех, кто хочет реализовать собственную творческую задумку вместе с
+                                            командой
+                                            профессионалов
+                                        </div>
+                                        <div class="price__top-box">
+                                            <div class="price__top-box-title">
+                                                Идеально подойдет, если хотите:
+                                            </div>
+                                            <ul class="price__top-box-list">
+                                                <li>Сделать песню на основе уже существующей известной песни</li>
+                                                <li>Написать песню на основе ваших набросков текста/музыки</li>
+                                                <li>Согласовывать текст и полноценно участвовать в творческом процессе
+                                                </li>
+                                                <li>Сделать уникальное поздравление «с приколом» в юмористическом стиле
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="price__top-price-big">
+                                            от 16 990 ₽
+                                        </div>
+
+                                        <div class="price__top-footer">
+                                            <a class="price__top-footer-button button button_white" href="#">
+                                                <img src="./public/images/icons/mic_red.svg" alt="Микрофон">
+                                                Заказать песню
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="price__top-cards-pagination"></div>
                         </div>
-                        <div class="price__top-cards-pagination"></div>
                     </div>
-                </div>
-                <div class="price__top-bottom">
-                    <div class="price__top-bottom-card">
-                        <div class="price__top-bottom-content">
-                            <div class="price__top-bottom-card-title">
-                                POP-STAR <img src="./public/images/icons/stars.svg" alt="звезда">
+                    <div class="price__top-bottom">
+                        <div class="price__top-bottom-card">
+                            <div class="price__top-bottom-content">
+                                <div class="price__top-bottom-card-title">
+                                    POP-STAR <img src="./public/images/icons/stars.svg" alt="звезда">
+                                </div>
+                                <div class="price__top-bottom-card-descr">
+                                    Воплощение вашей мечты стать артистом!
+                                    <span>Лицензирование на музыкальных площадках и получения дохода</span>
+                                </div>
+                                <div class="price__top-bottom-card-text">
+                                    Сверх <span>индивидуальная</span> работа под ключ
+                                </div>
+                                <div class="price__top-bottom-card-number">от 70 000 ₽</div>
+                                <div class="price__top-bottom-card-button-wrapper">
+                                    <a class="price__top-bottom-card-button button button_gradient" href="#">
+                                        Подробнее
+                                    </a>
+                                </div>
                             </div>
-                            <div class="price__top-bottom-card-descr">
-                                Воплощение вашей мечты стать артистом!
-                                <span>Лицензирование на музыкальных площадках и получения дохода</span>
+                            <div class="price__top-bottom-picture">
+                                <img src="./public/images/price/cards.png" alt="Поп-стар">
                             </div>
-                            <div class="price__top-bottom-card-text">
-                                Сверх <span>индивидуальная</span> работа под ключ
-                            </div>
-                            <div class="price__top-bottom-card-number">от 70 000 ₽</div>
-                            <div class="price__top-bottom-card-button-wrapper">
-                                <a class="price__top-bottom-card-button button button_gradient" href="#">
-                                    Подробнее
-                                </a>
-                            </div>
-                        </div>
-                        <div class="price__top-bottom-picture">
-                            <img src="./public/images/price/cards.png" alt="Поп-стар">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="team">
-            <div class="team__head">
-                <h2 class="team__title">
-                    Над вашими песнями трудятся
-                    <span> профессионалы с большим опытом! </span>
-                </h2>
-                <div class="team__content-mobile">
-                    <h3 class="team__subtitle">
-                        Мы - проект музыкального лейбла Voque Audio и студии звукозаписи Voque Studio.
-                    </h3>
-                    <p class="team__descr">За нашими плечами:</p>
+            <div class="more-options more-options_desctop" id="more-options">
+                <div class="more-options__cols">
+                    <div class="more-options__col more-options__col_pink">
+                        <div class="more-options__head">
+                            <div class="more-options__title">Дополнительные опции</div>
+                            <div class="more-options__sub-title">Не только песня, но и дополнительные возможности</div>
+                        </div>
+                        <div class="more-options__cards more-options__cards_offset">
+                            <div class="more-options__card">
+                                <div class="more-options__card-head">
+                                    <img class="more-options__card-head-icon"
+                                        src="./public/images/more-options/cut-broken.svg">
+                                    <div class="more-options__card-head-text">Голосовое поздравление</div>
+                                </div>
+                                <div class="more-options__card-shield">Обязательно на мероприятии!</div>
+                                <div class="more-options__card-descr">
+                                    Ваши слова в песне с поздравлением или теплыми словами
+                                </div>
+
+                                <div class="more-options__card-canvas">
+                                    <button class="more-options__card-canvas-button" type="button">
+                                        <img class="more-options__card-canvas-button-icon _show"
+                                            src="./public/images/icons/play.svg" alt="Включить песню">
+                                        <img class="more-options__card-canvas-button-icon"
+                                            src="./public/images/icons/pause.svg" alt="Пауза">
+                                    </button>
+                                    <div class="more-options__card-canvas-progress">
+                                        <div class="more-options__card-canvas-sup">Пример такой записи:</div>
+                                        <audio src="https://everyonesing.ru/wp-content/uploads/2025/10/123.mp3"></audio>
+                                        <canvas class="more-options__card-canvas-line"></canvas>
+                                    </div>
+                                </div>
+
+                                <div class="more-options__card-text">
+                                    Слова можно вставить в начало, середину или конец песни по желанию
+                                </div>
+
+                                <div class="more-options__card-price">
+                                    <div class="more-options__card-old">2 490 ₽</div>
+                                    <div class="more-options__card-new">1 490 ₽</div>
+                                </div>
+                            </div>
+                            <div class="more-options__card">
+                                <div class="more-options__card-head">
+                                    <img class="more-options__card-head-icon"
+                                        src="./public/images/more-options/voice.svg">
+                                    <div class="more-options__card-head-text">Слайд-шоу из фото</div>
+                                </div>
+                                <div class="more-options__card-shield">Обязательно на мероприятии!</div>
+                                <div class="more-options__card-descr">
+                                    Включай красивый видео-клип из ваших фото и видео
+                                </div>
+
+                                <div class="more-options__card-cover">
+                                    <button class="more-options__card-cover-button button button_gradient">
+                                        <img src="/public/images/icons/play-fill.svg" alt="Картинка">
+                                        Пример
+                                    </button>
+                                </div>
+
+                                <div class="more-options__card-text">
+                                    До 40 фото при стандартной длительности песни в 2-3 минуты
+                                </div>
+
+                                <div class="more-options__card-price">
+                                    <div class="more-options__card-old">3 990 ₽</div>
+                                    <div class="more-options__card-new">2 990 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-options__col more-options__col_orange">
+                        <div class="more-options__cards">
+                            <div class="more-options__card">
+                                <div class="more-options__card-head">
+                                    <img class="more-options__card-head-icon"
+                                        src="./public/images/more-options/stream.svg">
+                                    <div class="more-options__card-head-text">Выгрузка на площадки</div>
+                                </div>
+                                <div class="more-options__card-descr">
+                                    Отправляй ссылку, включай в машине или через Алису.
+                                </div>
+
+                                <div class="more-options__card-steamings">
+                                    <div class="more-options__card-steaming">
+                                        <img width="55" height="55" src="./public/images/more-options/ya.png"
+                                            alt="Картинка">
+                                    </div>
+                                    <div class="more-options__card-steaming">
+                                        <img width="55" height="55" src="./public/images/more-options/apple.png"
+                                            alt="Картинка">
+                                    </div>
+                                    <div class="more-options__card-steaming">
+                                        <img width="55" height="55" src="./public/images/more-options/vk.png"
+                                            alt="Картинка">
+                                    </div>
+                                    <div class="more-options__card-steaming">
+                                        <img width="55" height="55" src="./public/images/more-options/spoty.png"
+                                            alt="Картинка">
+                                    </div>
+                                </div>
+
+                                <div class="more-options__card-text">
+                                    Ваш трек будет доступен на Яндекс.Музыка, Apple Music, VK и др.
+                                </div>
+
+                                <div class="more-options__card-price">
+                                    <div class="more-options__card-old">3 990 ₽</div>
+                                    <div class="more-options__card-new">2 990 ₽</div>
+                                </div>
+                            </div>
+                            <div class="more-options__card">
+                                <div class="more-options__card-head">
+                                    <img class="more-options__card-head-icon"
+                                        src="./public/images/more-options/stream.svg">
+                                    <div class="more-options__card-head-text">Спеть вместе</div>
+                                </div>
+                                <div class="more-options__card-descr">
+                                    Отправляй ссылку, включай в машине или через Алису.
+                                </div>
+
+                                <div class="more-options__card-block">
+                                    У каждого будет своя индивидуальная часть в песне
+                                </div>
+
+                                <div class="more-options__card-footer-text">
+                                    * Важно, чтобы все участникам песни было более 14 лет
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <img src="./public/images/team/black-logo.png" alt="Команда">
             </div>
 
-            <div class="team__body">
-                <div class="team__content">
-                    <div class="team__content-desctop">
+            <div class="more-options more-options_mobile" id="more-options_m">
+                <div class="more-options__head">
+                    <div class="more-options__title">Дополнительные опции</div>
+                    <div class="more-options__sub-title">Не только песня, но и дополнительные возможности</div>
+                </div>
+
+                <div class="more-options__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="more-options__card">
+                                <div class="more-options__card-head">
+                                    <img class="more-options__card-head-icon"
+                                        src="./public/images/more-options/cut-broken.svg">
+                                    <div class="more-options__card-head-text">Голосовое поздравление</div>
+                                </div>
+                                <div class="more-options__card-shield">Обязательно на мероприятии!</div>
+                                <div class="more-options__card-descr">
+                                    Ваши слова в песне с поздравлением или теплыми словами
+                                </div>
+
+                                <div class="more-options__card-canvas">
+                                    <button class="more-options__card-canvas-button" type="button">
+                                        <img class="more-options__card-canvas-button-icon _show"
+                                            src="./public/images/icons/play.svg" alt="Включить песню">
+                                        <img class="more-options__card-canvas-button-icon"
+                                            src="./public/images/icons/pause.svg" alt="Пауза">
+                                    </button>
+                                    <div class="more-options__card-canvas-progress">
+                                        <div class="more-options__card-canvas-sup">Пример такой записи:</div>
+                                        <audio src="https://everyonesing.ru/wp-content/uploads/2025/10/123.mp3"></audio>
+                                        <canvas class="more-options__card-canvas-line"></canvas>
+                                    </div>
+                                </div>
+
+                                <div class="more-options__card-text">
+                                    Слова можно вставить в начало, середину или конец песни по желанию
+                                </div>
+
+                                <div class="more-options__card-price">
+                                    <div class="more-options__card-old">2 490 ₽</div>
+                                    <div class="more-options__card-new">1 490 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="more-options__card">
+                                <div class="more-options__card-head">
+                                    <img class="more-options__card-head-icon"
+                                        src="./public/images/more-options/voice.svg">
+                                    <div class="more-options__card-head-text">Слайд-шоу из фото</div>
+                                </div>
+                                <div class="more-options__card-shield">Обязательно на мероприятии!</div>
+                                <div class="more-options__card-descr">
+                                    Включай красивый видео-клип из ваших фото и видео
+                                </div>
+
+                                <div class="more-options__card-cover">
+                                    <button class="more-options__card-cover-button button button_gradient">
+                                        <img src="/public/images/icons/play-fill.svg" alt="Картинка">
+                                        Пример
+                                    </button>
+                                </div>
+
+                                <div class="more-options__card-text">
+                                    До 40 фото при стандартной длительности песни в 2-3 минуты
+                                </div>
+
+                                <div class="more-options__card-price">
+                                    <div class="more-options__card-old">3 990 ₽</div>
+                                    <div class="more-options__card-new">2 990 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="more-options__card">
+                                <div class="more-options__card-head">
+                                    <img class="more-options__card-head-icon"
+                                        src="./public/images/more-options/stream.svg">
+                                    <div class="more-options__card-head-text">Выгрузка на площадки</div>
+                                </div>
+                                <div class="more-options__card-descr">
+                                    Отправляй ссылку, включай в машине или через Алису.
+                                </div>
+
+                                <div class="more-options__card-steamings">
+                                    <div class="more-options__card-steaming">
+                                        <img width="55" height="55" src="./public/images/more-options/ya.png"
+                                            alt="Картинка">
+                                    </div>
+                                    <div class="more-options__card-steaming">
+                                        <img width="55" height="55" src="./public/images/more-options/apple.png"
+                                            alt="Картинка">
+                                    </div>
+                                    <div class="more-options__card-steaming">
+                                        <img width="55" height="55" src="./public/images/more-options/vk.png"
+                                            alt="Картинка">
+                                    </div>
+                                    <div class="more-options__card-steaming">
+                                        <img width="55" height="55" src="./public/images/more-options/spoty.png"
+                                            alt="Картинка">
+                                    </div>
+                                </div>
+
+                                <div class="more-options__card-text">
+                                    Ваш трек будет доступен на Яндекс.Музыка, Apple Music, VK и др.
+                                </div>
+
+                                <div class="more-options__card-price">
+                                    <div class="more-options__card-old">3 990 ₽</div>
+                                    <div class="more-options__card-new">2 990 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="more-options__card">
+                                <div class="more-options__card-head">
+                                    <img class="more-options__card-head-icon"
+                                        src="./public/images/more-options/stream.svg">
+                                    <div class="more-options__card-head-text">Спеть вместе</div>
+                                </div>
+                                <div class="more-options__card-descr">
+                                    Отправляй ссылку, включай в машине или через Алису.
+                                </div>
+
+                                <div class="more-options__card-block">
+                                    У каждого будет своя индивидуальная часть в песне
+                                </div>
+
+                                <div class="more-options__card-footer-text">
+                                    * Важно, чтобы все участникам песни было более 14 лет
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-options__slider-pagination"></div>
+                </div>
+            </div>
+
+            <div class="team" id="team">
+                <div class="team__head">
+                    <h2 class="team__title">
+                        Над вашими песнями трудятся
+                        <span> профессионалы с большим опытом! </span>
+                    </h2>
+                    <div class="team__content-mobile">
                         <h3 class="team__subtitle">
                             Мы - проект музыкального лейбла Voque Audio и студии звукозаписи Voque Studio.
                         </h3>
                         <p class="team__descr">За нашими плечами:</p>
                     </div>
-
-                    <div class="team__items">
-                        <div class="team__item">
-                            <div class="team__item-title">200+</div>
-                            <div class="team__item-text">
-                                Проектов с такими артистами как:
-                                ynchq, ELLA, Thomas Mraz, ЛАУД, KURT92, TVETH и другие
-                            </div>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-title">550+</div>
-                            <div class="team__item-text">
-                                Выложенных релизов на музыкальные площадки с общим количеством прослушиваний более 15
-                                млн. за 2023 год
-                            </div>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-title">1000+</div>
-                            <div class="team__item-text">
-                                Проектов по написанию текстов, записи песен, сведению, мастерингу, продакшену и съемки
-                                клипов.
-                            </div>
-                        </div>
-                        <div class="team__item">
-                            <div class="team__item-title">4 года</div>
-                            <div class="team__item-text">
-                                работы в музыкальной сфере
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team__content-footer">
-                        Мы разрабатываем собственное ПО по созданию песен голосом клиента
-                    </div>
+                    <img src="./public/images/team/black-logo.png" alt="Команда">
                 </div>
-                <div class="team__image">
-                    <img width="870" height="986" src="./public/images/team/team.png" alt="Команда">
+
+                <div class="team__body">
+                    <div class="team__content">
+                        <div class="team__content-desctop">
+                            <h3 class="team__subtitle">
+                                Мы - проект музыкального лейбла Voque Audio и студии звукозаписи Voque Studio.
+                            </h3>
+                            <p class="team__descr">За нашими плечами:</p>
+                        </div>
+
+                        <div class="team__items">
+                            <div class="team__item">
+                                <div class="team__item-title">200+</div>
+                                <div class="team__item-text">
+                                    Проектов с такими артистами как:
+                                    ynchq, ELLA, Thomas Mraz, ЛАУД, KURT92, TVETH и другие
+                                </div>
+                            </div>
+                            <div class="team__item">
+                                <div class="team__item-title">550+</div>
+                                <div class="team__item-text">
+                                    Выложенных релизов на музыкальные площадки с общим количеством прослушиваний более
+                                    15
+                                    млн. за 2023 год
+                                </div>
+                            </div>
+                            <div class="team__item">
+                                <div class="team__item-title">1000+</div>
+                                <div class="team__item-text">
+                                    Проектов по написанию текстов, записи песен, сведению, мастерингу, продакшену и
+                                    съемки
+                                    клипов.
+                                </div>
+                            </div>
+                            <div class="team__item">
+                                <div class="team__item-title">4 года</div>
+                                <div class="team__item-text">
+                                    работы в музыкальной сфере
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team__content-footer">
+                            Мы разрабатываем собственное ПО по созданию песен голосом клиента
+                        </div>
+                    </div>
+                    <div class="team__image">
+                        <img width="870" height="986" src="./public/images/team/team.png" alt="Команда">
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="faq">
+        <div class="faq" id="faq">
             <div class="faq__wrapper">
                 <div class="faq__title">Вопросы-ответы</div>
 
                 <div class="faq__list">
                     <div class="faq__item">
-                        <button class="faq__item-title _active">Песня моим голосом, это как? Что если я не умею петь?
+                        <button class="faq__item-title _active">Песня моим голосом, это как? Что если я не умею
+                            петь?
                             <span class="faq__item-title-circle">
                                 <span class="faq__item-title-circle-line"></span>
                                 <span class="faq__item-title-circle-line"></span>
@@ -707,7 +988,8 @@
                         <div class="faq__item-content _active" style="height: 4.125rem; opacity: 1;">
                             <p class="faq__item-text">
                                 От вас требуется лишь Ваш голос. Все остальное ляжет на плечи наших вокалистов
-                                звукорежиссеров. При помощи нашей уникальной технологии мы создадим песню вашим голосом,
+                                звукорежиссеров. При помощи нашей уникальной технологии мы создадим песню вашим
+                                голосом,
                                 даже если вы никогда не пели!
                             </p>
                         </div>
@@ -721,7 +1003,8 @@
                         </button>
                         <div class="faq__item-content">
                             <p class="faq__item-text">
-                                Для оформления заказа вовсе не обязательно оплачивать весь заказ целиком! Мы работаем по
+                                Для оформления заказа вовсе не обязательно оплачивать весь заказ целиком! Мы
+                                работаем по
                                 предоплате 50%, а вторую часть вы оплачиваете только после получения и утверждения
                                 готового произведения!
                             </p>
@@ -736,7 +1019,8 @@
                         </button>
                         <div class="faq__item-content">
                             <p class="faq__item-text">
-                                Да, конечно! Вы можете разделить свой платеж на 4 равные части через сервис "Долями" от
+                                Да, конечно! Вы можете разделить свой платеж на 4 равные части через сервис "Долями"
+                                от
                                 Т-Банка
                             </p>
                         </div>
@@ -750,7 +1034,8 @@
                         </button>
                         <div class="faq__item-content">
                             <p class="faq__item-text">
-                                Для приема оплаты из другой страны мы используем специальный сервис, который позволит
+                                Для приема оплаты из другой страны мы используем специальный сервис, который
+                                позволит
                                 вам оплатить заказ с карты местного банка.
                             </p>
                         </div>
@@ -779,7 +1064,8 @@
                         </button>
                         <div class="faq__item-content">
                             <p class="faq__item-text">
-                                Да, это один из самых трогательных способов — песня-предложение. Она помогает сказать
+                                Да, это один из самых трогательных способов — песня-предложение. Она помогает
+                                сказать
                                 важные слова любимому человеку красиво и незабываемо.
                             </p>
                         </div>
@@ -835,7 +1121,8 @@
                         </button>
                         <div class="faq__item-content">
                             <p class="faq__item-text">
-                                Да, песня — это отличный подарок на день рождение человека. Она передаёт самые тёплые
+                                Да, песня — это отличный подарок на день рождение человека. Она передаёт самые
+                                тёплые
                                 чувства и делает праздник особенным.
                             </p>
                         </div>

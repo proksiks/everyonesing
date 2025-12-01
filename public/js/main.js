@@ -4,4 +4,6 @@ import "./steps-audio-visualizer.js";
 import "./slider.js";
 import "./price.js";
 import "./price-audio-visualizer.js";
+import "./more-options-audio-visualizer.js";
+import "./more-options-slider.js";
 import "./faq-accordion.js";

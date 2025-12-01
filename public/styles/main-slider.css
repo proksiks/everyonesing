@@ -49,6 +49,12 @@
 .main-slider-inner {
   border-top: 0.125rem solid #e6e8ed;
   border-bottom: 0.125rem solid #e6e8ed;
+  padding-top: 10rem;
+}
+@media (max-width: 1280px) {
+  .main-slider-inner {
+    padding-top: 4rem;
+  }
 }
 
 .main-slider {
@@ -110,16 +116,15 @@
 }
 
 .main-slider__title {
-  padding-top: 10rem;
   font-size: 3.5rem;
   line-height: 1.2;
   font-weight: 600;
+  margin: 0;
 }
 
 @media (max-width: 1024px) {
   .main-slider__title {
     font-size: 1.75rem;
-    padding-top: 4rem;
   }
 }
 

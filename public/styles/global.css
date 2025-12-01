@@ -38,6 +38,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -58,6 +59,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   background-color: transparent;
+  border: none;
   padding: 1rem 1.5rem;
   border-radius: 2.25rem;
   transition: transform 0.2s ease;
@@ -84,4 +86,7 @@ body {
 
 .main-page {
   margin-bottom: 75rem;
+}
+.overflow-hidden {
+  overflow: hidden;
 }

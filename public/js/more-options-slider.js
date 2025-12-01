@@ -4,10 +4,10 @@ const mediaQuery = window.matchMedia("(max-width: 1440px)");
 
 function handleMediaChange(e) {
   if (e.matches) {
-    new Swiper(".price__top-cards", {
+    new Swiper(".more-options__slider", {
       slidesPerView: "auto",
       pagination: {
-        el: ".price__top-cards-pagination",
+        el: ".more-options__slider-pagination",
         clickable: true,
       },
     });

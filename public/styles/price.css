@@ -1,6 +1,5 @@
 .price {
   padding: 0 5rem;
-  padding-top: 10rem;
   overflow: hidden;
 }
 @media (max-width: 1280px) {
@@ -348,15 +347,11 @@
   font-size: 1.5rem;
   line-height: 1.2;
   font-weight: 600;
+  text-wrap: nowrap;
 }
 @media (max-width: 1440px) {
   .price__top-price-card-price {
     font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .price__top-price-card-price {
-    text-wrap: nowrap;
   }
 }
 .price__top-price-big {

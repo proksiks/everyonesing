@@ -1,0 +1,144 @@
+function initMoreOptionsAudioVisualizer() {
+  const musicBlocks = document.querySelectorAll(".more-options__card-canvas");
+  if (!musicBlocks.length) return;
+
+  const CANVAS_WIDTH = 260;
+  const CANVAS_HEIGHT = 40;
+
+  const LOW = 8;
+  const MID = 16;
+  const HIGH = 24;
+  const barRadius = 2;
+
+  const barCount = 40;
+  const horizontalPadding = 0;
+
+  const pattern = [LOW, MID, HIGH, MID, LOW];
+
+  const allAudioElements = [];
+
+  musicBlocks.forEach((block) => {
+    const audioButton = block.querySelector(
+      ".more-options__card-canvas-button"
+    );
+    const audioElement = block.querySelector("audio");
+    const canvas = block.querySelector("canvas");
+
+    if (!audioButton || !audioElement || !canvas) return;
+
+    allAudioElements.push(audioElement);
+
+    const ctx = canvas.getContext("2d");
+    const buttonIcons = audioButton.querySelectorAll(
+      ".more-options__card-canvas-button-icon"
+    );
+    const playIcon = buttonIcons[0];
+    const pauseIcon = buttonIcons[1];
+
+    canvas.width = CANVAS_WIDTH;
+    canvas.height = CANVAS_HEIGHT;
+
+    const centerY = canvas.height / 2;
+
+    const baseHeights = [];
+    for (let i = 0; i < barCount; i++) {
+      baseHeights.push(pattern[i % pattern.length]);
+    }
+
+    const innerWidth = canvas.width - horizontalPadding * 2;
+    const barWidth = 4;
+    const totalBarsWidth = barCount * barWidth;
+    const spacing =
+      barCount > 1 ? (innerWidth - totalBarsWidth) / (barCount - 1) : 0;
+    const startX = horizontalPadding;
+
+    let isPlaying = false;
+
+    audioButton.addEventListener("click", () => {
+      allAudioElements.forEach((otherAudio) => {
+        if (otherAudio !== audioElement && !otherAudio.paused) {
+          otherAudio.pause();
+        }
+      });
+
+      if (isPlaying) {
+        audioElement.pause();
+      } else {
+        audioElement.play();
+      }
+    });
+
+    audioElement.addEventListener("play", () => {
+      isPlaying = true;
+      playIcon.classList.remove("_show");
+      pauseIcon.classList.add("_show");
+      drawVisualization();
+    });
+
+    audioElement.addEventListener("pause", () => {
+      isPlaying = false;
+      playIcon.classList.add("_show");
+      pauseIcon.classList.remove("_show");
+    });
+
+    audioElement.addEventListener("ended", () => {
+      isPlaying = false;
+      playIcon.classList.add("_show");
+      pauseIcon.classList.remove("_show");
+    });
+
+    function drawVisualization() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const duration = audioElement.duration || 0;
+      const current = audioElement.currentTime || 0;
+      const progress = duration ? current / duration : 0;
+
+      const activeBars = Math.round(barCount * progress);
+
+      let x = startX;
+
+      for (let i = 0; i < barCount; i++) {
+        const h = baseHeights[i];
+        const y = centerY - h / 2;
+
+        drawRoundedRect(ctx, x, y, barWidth, h, barRadius, "#dadada");
+
+        if (i < activeBars) {
+          drawRoundedRect(ctx, x, y, barWidth, h, barRadius, "#C61A02");
+        }
+
+        x += barWidth + spacing;
+      }
+
+      if (isPlaying && !audioElement.paused && !audioElement.ended) {
+        requestAnimationFrame(drawVisualization);
+      }
+    }
+
+    function drawRoundedRect(ctx, x, y, width, height, radius, color) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(x + radius, y);
+      ctx.lineTo(x + width - radius, y);
+      ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+      ctx.lineTo(x + width, y + height - radius);
+      ctx.quadraticCurveTo(
+        x + width,
+        y + height,
+        x + width - radius,
+        y + height
+      );
+      ctx.lineTo(x + radius, y + height);
+      ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+      ctx.lineTo(x, y + radius);
+      ctx.quadraticCurveTo(x, y, x + radius, y);
+      ctx.closePath();
+      ctx.fill();
+    }
+
+    drawVisualization();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initMoreOptionsAudioVisualizer);
