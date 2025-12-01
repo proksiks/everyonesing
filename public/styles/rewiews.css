@@ -43,6 +43,11 @@
     font-size: 1.75rem;
   }
 }
+@media (max-width: 480px) {
+  .reviews__head-title {
+    line-height: 1.1;
+  }
+}
 .reviews__head-text {
   font-size: 2.25rem;
   color: var(--color-red);
