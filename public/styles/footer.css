@@ -14,6 +14,7 @@
     margin-top: 10rem;
   }
 }
+
 .page-footer::before {
   position: absolute;
   width: 150%;
@@ -60,7 +61,7 @@
     width: 200%;
     height: 100%;
     left: -50%;
-    bottom: -50%;
+    bottom: 0;
     z-index: -3;
     content: "";
     background: radial-gradient(
