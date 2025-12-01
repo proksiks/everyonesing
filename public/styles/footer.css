@@ -1,12 +1,12 @@
 .page-footer {
   position: relative;
-  margin-top: 13.125rem;
+  margin-top: 30rem;
 }
 
 .page-footer::before {
   position: absolute;
   width: 150%;
-  height: 150%;
+  height: 100%;
   left: -25%;
   top: -10%;
   z-index: -2;
@@ -43,7 +43,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 0 5rem;
-  padding-top: 30rem;
+  padding-top: 20rem;
   padding-bottom: 5rem;
 }
 .page-footer__item {
