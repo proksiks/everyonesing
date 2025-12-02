@@ -14,7 +14,7 @@ function initWhyAnimation() {
     items.forEach((item) => {
       const rect = item.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      const isVisible = rect.top < windowHeight * 0.8 && rect.bottom > 0;
+      const isVisible = rect.top < windowHeight * 0.6 && rect.bottom > 0;
 
       if (isVisible) {
         item.classList.remove("cards__item--hidden");

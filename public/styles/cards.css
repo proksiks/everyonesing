@@ -75,7 +75,7 @@
 }
 .cards__item_1 {
   background-color: var(--color-red);
-  margin-top: 0;
+  margin-top: 33.75rem;
 }
 .cards__item_2 {
   background: radial-gradient(
@@ -100,7 +100,7 @@
 .cards__item_3 {
   color: var(--color-gray-800);
   background-color: #e6edf6;
-  margin-top: 0;
+  margin-top: 17.5rem;
 }
 .cards__item_4 {
   background: radial-gradient(
@@ -115,7 +115,7 @@
       #fd752b 57.96%,
       #c61a02 100%
     );
-  margin-top: 0;
+  margin-top: 57.5rem;
 }
 
 @media (max-width: 920px) {
