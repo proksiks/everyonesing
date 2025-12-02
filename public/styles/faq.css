@@ -108,15 +108,19 @@
 .faq__item-title-circle-line:last-child {
   transform: translate(-50%, -50%) rotate(0deg);
 }
+
 .faq__item-content {
-  height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: height 0.3s ease, opacity 0.3s ease;
   opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  will-change: max-height, opacity;
 }
+
 .faq__item-content._active {
   opacity: 1;
 }
+
 .faq__item-text {
   max-width: 79.6875rem;
   margin: 0;

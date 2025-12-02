@@ -350,9 +350,6 @@
 .examples__player-composition-cover-button-icon._show {
   display: block;
 }
-
-.examples__player-composition-content {
-}
 .examples__player-composition-title {
   font-size: 1.25rem;
   line-height: 1.2;
@@ -466,6 +463,18 @@
   height: 28.25rem;
   border-radius: 1rem;
   object-fit: cover;
+}
+
+@media (max-width: 1440px) {
+  .examples__content-video {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .examples__content-video {
+    height: auto;
+  }
 }
 .examples__content-body {
   flex: 1;

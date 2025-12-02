@@ -130,8 +130,6 @@
 .page-footer__link:hover {
   text-decoration: none;
 }
-.page-footer__text {
-}
 .page-footer__text + .page-footer__text {
   margin-top: 1rem;
 }
@@ -168,5 +166,6 @@
 @media (max-width: 620px) {
   .page-footer__under {
     text-align: center;
+    padding-bottom: 4rem;
   }
 }

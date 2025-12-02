@@ -335,8 +335,6 @@
   padding: 0;
   margin: 0;
 }
-.mobile-menu__item {
-}
 .mobile-menu__item + .mobile-menu__item {
   margin-top: 16px;
 }
@@ -355,8 +353,6 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 4.375rem;
-}
-.mobile-menu__box-content {
 }
 .mobile-menu__box-tel {
   font-size: 1.125rem;
@@ -377,6 +373,4 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-.mobile-menu__box-social {
 }

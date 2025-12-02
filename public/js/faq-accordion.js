@@ -21,32 +21,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const allButtons = document.querySelectorAll(".faq__item-title._active");
     const allContents = document.querySelectorAll(".faq__item-content._active");
 
-    allButtons.forEach((button) => {
-      button.classList.remove("_active");
-    });
-
+    allButtons.forEach((button) => button.classList.remove("_active"));
     allContents.forEach((content) => {
-      content.style.height = "0";
-      content.style.opacity = "0";
+      content.style.maxHeight = null;
       content.classList.remove("_active");
     });
   }
 
   function openAccordion(content, button) {
-    const contentHeight = content.scrollHeight + "px";
     button.classList.add("_active");
-    content.style.height = contentHeight;
-    content.style.opacity = "1";
     content.classList.add("_active");
+    content.style.maxHeight = content.scrollHeight + "px";
   }
 
   function closeAccordion(content, button) {
-    const contentHeight = content.scrollHeight + "px";
-    content.style.height = contentHeight;
-    void content.offsetWidth;
     button.classList.remove("_active");
-    content.style.height = "0";
-    content.style.opacity = "0";
+    content.style.maxHeight = null;
     content.classList.remove("_active");
   }
 });

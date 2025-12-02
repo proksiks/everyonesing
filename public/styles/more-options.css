@@ -158,6 +158,9 @@
   padding: 0.5rem 1.5rem;
   line-height: 1.01;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 480px) {
   .more-options__card-shield {
