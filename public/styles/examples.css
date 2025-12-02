@@ -27,7 +27,7 @@
   line-height: 1.2;
   font-weight: 600;
   margin: 0;
-  color: #2B2B2D;
+  color: #2b2b2d;
 }
 .examples__head-text {
   margin: 0;
@@ -100,7 +100,7 @@
 }
 @media (max-width: 860px) {
   .examples__body-decorate {
-    top: -52.5rem;
+    top: -50rem;
     left: -50%;
     height: 54.5rem;
     width: 200%;
@@ -290,12 +290,18 @@
   background-color: transparent;
   padding: 0;
   text-align: left;
+  color: #2b2b2d;
 }
 
 .examples__player-composition-inner._active {
   padding: 0.625rem 0.875rem;
   background-color: white;
   border-radius: 1rem;
+}
+
+.examples__player-composition-inner._active
+  .examples__player-composition-cover-button {
+  opacity: 1;
 }
 
 @media (max-width: 480px) {
@@ -322,6 +328,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 .examples__player-composition-cover-button::before {
   content: "";
