@@ -143,7 +143,7 @@ class AudioPlayer {
           <h3 class="examples__content-title"></h3>
           <div class="examples__content-inner">
             <div class="examples__content-picture">
-              <video width="385" height="452" class="examples__content-video" src="" poster="" alt="Картинка" muted playsinline></video>
+              <video width="385" height="452" class="examples__content-video" src="" poster="" alt="Картинка" controls muted playsinline></video>
             </div>
             <div class="examples__content-body">
               <p class="examples__content-text"></p>
@@ -325,11 +325,11 @@ class AudioPlayer {
 
       if (song.video) {
         this.contentVideo.muted = true;
-        this.contentVideo
-          .play()
-          .catch((e) =>
-            console.log("Видео не может быть воспроизведено автоматически:", e)
-          );
+        // this.contentVideo
+        //   .play()
+        //   .catch((e) =>
+        //     console.log("Видео не может быть воспроизведено автоматически:", e)
+        //   );
       }
     } else {
       this.isPlaying = false;
@@ -469,9 +469,9 @@ class AudioPlayer {
       const currentSong = songsData[this.currentIndex];
       if (currentSong && currentSong.video) {
         this.contentVideo.muted = true;
-        this.contentVideo
-          .play()
-          .catch((e) => console.log("Видео не может быть воспроизведено:", e));
+        // this.contentVideo
+        //   .play()
+        //   .catch((e) => console.log("Видео не может быть воспроизведено:", e));
       }
     } else {
       this.audio.pause();
