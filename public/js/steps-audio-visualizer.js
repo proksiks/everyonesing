@@ -229,7 +229,6 @@ function initStepsAnimation() {
   });
 }
 
-// Инициализация всех функций
 document.addEventListener("DOMContentLoaded", () => {
   initStepsAudioVisualizer();
   initStepsAnimation();

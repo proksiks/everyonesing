@@ -2,8 +2,10 @@ const songsData = [
   {
     title: "Любимому",
     name: "Виктория",
-    audio: "https://everyonesing.ru/wp-content/uploads/2025/09/Любимому-Песня.mp3",
-    image: "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6135-974x1024.jpg",
+    audio:
+      "https://everyonesing.ru/wp-content/uploads/2025/09/Любимому-Песня.mp3",
+    image:
+      "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6135-974x1024.jpg",
     video: "https://everyonesing.ru/wp-content/uploads/2025/10/IMG_6379.mp4",
     date: "12 ноября 2025",
     color: "#EF0105",
@@ -13,8 +15,10 @@ const songsData = [
   {
     title: "На Свадьбу",
     name: "Наталия",
-    audio: "https://everyonesing.ru/wp-content/uploads/2025/09/Любимому-Песня.mp3",
-    image: "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6137-1024x1024.jpg",
+    audio:
+      "https://everyonesing.ru/wp-content/uploads/2025/09/Любимому-Песня.mp3",
+    image:
+      "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6137-1024x1024.jpg",
     video: "https://everyonesing.ru/wp-content/uploads/2025/10/IMG_6376.mp4",
     date: "15 ноября 2025",
     color: "#FF0C59",
@@ -24,8 +28,10 @@ const songsData = [
   {
     title: "Подруге",
     name: "Анастасия",
-    audio: "https://everyonesing.ru/wp-content/uploads/2025/09/Подруге-Песня.mp3",
-    image: "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6139-987x1024.jpg",
+    audio:
+      "https://everyonesing.ru/wp-content/uploads/2025/09/Подруге-Песня.mp3",
+    image:
+      "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6139-987x1024.jpg",
     video: "https://everyonesing.ru/wp-content/uploads/2025/10/IMG_6378.mp4",
     date: "15 ноября 2025",
     color: "#FF4400",
@@ -36,7 +42,8 @@ const songsData = [
     title: "Песня жене",
     name: "Александр",
     audio: "https://everyonesing.ru/wp-content/uploads/2025/09/Жене-Песня.mp3",
-    image: "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6138-1024x1024.jpg",
+    image:
+      "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6138-1024x1024.jpg",
     video: "https://everyonesing.ru/wp-content/uploads/2025/10/IMG_6377.mp4",
     date: "15 ноября 2025",
     color: "#4971FC",
@@ -47,7 +54,8 @@ const songsData = [
     title: "Маме",
     name: "Алина",
     audio: "https://everyonesing.ru/wp-content/uploads/2025/09/Маме-Песня.mp3",
-    image: "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6133-2-1024x1024.jpg",
+    image:
+      "https://everyonesing.ru/wp-content/uploads/2025/09/IMG_6133-2-1024x1024.jpg",
     video: "https://everyonesing.ru/wp-content/uploads/2025/10/IMG_6371.mp4",
     date: "15 ноября 2025",
     color: "#88b58b",
@@ -289,7 +297,6 @@ class AudioPlayer {
     this.contentTitle.textContent = song.name;
     this.contentDate.textContent = song.date;
 
-    // Установка видео, если оно есть
     if (song.video) {
       this.contentVideo.src = song.video;
       this.contentVideo.poster = song.image;
@@ -316,7 +323,6 @@ class AudioPlayer {
       this.audio.play();
       this.isPlaying = true;
 
-      // Автоматическое воспроизведение видео, если оно есть
       if (song.video) {
         this.contentVideo.muted = true;
         this.contentVideo
@@ -460,7 +466,6 @@ class AudioPlayer {
       this.audio.play();
       this.isPlaying = true;
 
-      // Воспроизведение видео, если оно есть
       const currentSong = songsData[this.currentIndex];
       if (currentSong && currentSong.video) {
         this.contentVideo.muted = true;
@@ -472,7 +477,6 @@ class AudioPlayer {
       this.audio.pause();
       this.isPlaying = false;
 
-      // Пауза видео, если оно есть
       const currentSong = songsData[this.currentIndex];
       if (currentSong && currentSong.video) {
         this.contentVideo.pause();
