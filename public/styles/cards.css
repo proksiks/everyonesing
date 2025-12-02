@@ -133,6 +133,7 @@
 .cards__item-title {
   font-size: 2.25rem;
   font-weight: 500;
+  line-height: 1.1;
 }
 @media (max-width: 1440px) {
   .cards__item-title {
