@@ -28,4 +28,56 @@ function initWhyAnimation() {
   window.addEventListener("scroll", showItems);
 }
 
+function initCardsTitleAnimation() {
+  const cardsWrapper = document.querySelector(".cards-wrapper");
+  if (!cardsWrapper) return;
+
+  const cardsTitle = cardsWrapper.querySelector(".cards__title");
+  if (!cardsTitle) return;
+
+  cardsTitle.style.willChange = "transform, opacity";
+  cardsTitle.style.transition = "none";
+
+  let ticking = false;
+
+  function updateAnimation() {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const titleTriggerPoint = windowHeight * 0.5;
+
+    const titleRect = cardsWrapper.getBoundingClientRect();
+    const titleOffsetTop = titleRect.top;
+
+    let titleProgress = 0;
+    if (titleOffsetTop < titleTriggerPoint) {
+      const distanceFromTrigger = titleTriggerPoint - titleOffsetTop;
+      titleProgress = Math.max(
+        0,
+        Math.min(1, distanceFromTrigger / windowHeight)
+      );
+    }
+    cardsTitle.style.transform = `translateY(${titleProgress * 500}px)`;
+    cardsTitle.style.opacity = Math.max(0, 1 - titleProgress * 1.8);
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateAnimation();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  updateAnimation();
+
+  window.addEventListener("scroll", requestTick, { passive: true });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initWhyAnimation();
+  initCardsTitleAnimation();
+});
+
 document.addEventListener("DOMContentLoaded", initWhyAnimation);

@@ -54,6 +54,10 @@ body {
   color: #2b2b2d;
 }
 
+button {
+  font-family: inherit;
+}
+
 .main-page {
   max-width: 2440px;
   margin: 0 auto;
