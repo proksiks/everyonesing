@@ -100,11 +100,11 @@
 }
 @media (max-width: 860px) {
   .examples__body-decorate {
-    top: -50rem;
+    top: -52rem;
     left: -50%;
     height: 54.5rem;
     width: 200%;
-    filter: blur(40px);
+    filter: blur(20px);
   }
 }
 .examples__player {
