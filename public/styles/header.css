@@ -325,7 +325,7 @@
 .mobile-menu__item {
 }
 .mobile-menu__item + .mobile-menu__item {
-  margin-top: 24px;
+  margin-top: 16px;
 }
 .mobile-menu__link {
   text-decoration: none;
