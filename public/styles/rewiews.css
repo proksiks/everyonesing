@@ -265,10 +265,6 @@
   }
 }
 
-.reviews__mobile {
-  overflow: hidden;
-}
-
 .reviews__slider {
   position: relative;
   padding-bottom: 2.5rem;

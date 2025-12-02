@@ -97,6 +97,7 @@
   width: 100%;
   height: 100%;
   filter: blur(80px);
+  transition: background 0.3s ease;
 }
 @media (max-width: 860px) {
   .examples__body-decorate {
@@ -413,6 +414,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .examples__content-text {
+    font-size: 1rem;
+  }
+}
+
 .examples__content-more {
   color: var(--color-red);
   text-decoration: underline;
@@ -423,6 +430,14 @@
   cursor: pointer;
   display: none;
 }
+
+@media (max-width: 480px) {
+  .examples__content-more {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
 .examples__content-more._show {
   display: block;
 }
@@ -441,6 +456,7 @@
     margin-top: 1rem;
   }
 }
+
 .examples__content-picture {
   flex: 1;
 }

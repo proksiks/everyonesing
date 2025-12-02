@@ -190,6 +190,17 @@
   justify-content: space-between;
 }
 
+.mobile-sticky::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  left: -25%;
+  top: 10%;
+  height: 6.25rem;
+  background-color: #2b2b2d;
+  filter: blur(3rem);
+}
+
 @media (max-width: 1024px) {
   .mobile-sticky {
     display: flex;
@@ -197,6 +208,8 @@
 }
 
 .mobile-sticky__left {
+  position: relative;
+  z-index: 1;
   flex: 1;
   border: none;
   background-color: #f4f6f9;
