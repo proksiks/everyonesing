@@ -49,7 +49,7 @@
 .header__list-link {
   font-weight: 500;
   text-decoration: none;
-  color: black;
+  color: #2b2b2d;
   font-size: 1.125rem;
   line-height: 1.2;
   padding: 1rem 0;
@@ -74,7 +74,7 @@
   font-size: 1.125rem;
   line-height: 1.2;
   text-decoration: none;
-  color: black;
+  color: #2b2b2d;
   transition: color 0.3s ease;
 }
 .header__info-phone:hover {
@@ -159,7 +159,7 @@
   display: block;
   padding: 0.875rem 1.5rem;
   text-decoration: none;
-  color: black;
+  color: #2b2b2d;
   font-weight: 500;
   line-height: 1.2;
   transition: color 0.3s ease;
@@ -223,7 +223,7 @@
   position: absolute;
   width: 1.25rem;
   height: 0.125rem;
-  background-color: black;
+  background-color: #2b2b2d;
 }
 .mobile-sticky__line:first-child {
   left: 0.125rem;
