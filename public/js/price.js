@@ -10,6 +10,14 @@ function handleMediaChange(e) {
         el: ".price__top-cards-pagination",
         clickable: true,
       },
+      breakpoints: {
+        0: {
+          initialSlide: 1,
+        },
+        480: {
+          initialSlide: 0,
+        },
+      },
     });
   }
 }

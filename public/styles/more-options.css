@@ -126,6 +126,11 @@
     height: 100%;
   }
 }
+@media (max-width: 480px) {
+  .more-options__card {
+    align-items: flex-start;
+  }
+}
 
 .more-options__card-head {
   display: flex;
@@ -153,6 +158,11 @@
   padding: 0.5rem 1.5rem;
   line-height: 1;
   text-align: center;
+}
+@media (max-width: 480px) {
+  .more-options__card-shield {
+    padding: 0.25rem 1rem;
+  }
 }
 .more-options__card-descr {
   font-size: 1.25rem;

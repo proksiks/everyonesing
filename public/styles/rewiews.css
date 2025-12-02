@@ -278,6 +278,8 @@
   .reviews__slider {
     display: block;
     margin-top: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 .reviews__slider .swiper-slide {

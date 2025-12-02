@@ -65,6 +65,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .price__top-cards .swiper-slide {
+    max-width: 21.5625rem;
+  }
+}
+
 .price__top-card {
   position: relative;
   background-color: #edf0f4;
