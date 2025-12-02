@@ -187,20 +187,20 @@ class AudioPlayer {
       const item = document.createElement("li");
       item.className = "examples__player-composition-item";
       item.innerHTML = `
-        <div class="examples__player-composition-inner">
+        <button class="examples__player-composition-inner" data-index="${index}">
           <div class="examples__player-composition-cover">
             <img width="53" height="53" class="examples__player-composition-cover-img" src="${song.image}" alt="Картинка">
-            <button class="examples__player-composition-cover-button" data-index="${index}">
+            <div class="examples__player-composition-cover-button">
               <img class="examples__player-composition-cover-button-icon _show" src="./public/images/icons/play.svg" alt="Включить песню">
               <img class="examples__player-composition-cover-button-icon" src="./public/images/icons/pause.svg" alt="Пауза">
-            </button>
+            </div>
           </div>
           <div class="examples__player-composition-content">
             <div class="examples__player-composition-title">${song.title}</div>
             <div class="examples__player-composition-name">${song.name}</div>
           </div>
           <div class="examples__player-composition-time" data-index="${index}">--:--</div>
-        </div>
+        </button>
       `;
       this.compositionList.appendChild(item);
     });
@@ -211,7 +211,7 @@ class AudioPlayer {
 
   bindCompositionButtons() {
     const coverButtons = this.container.querySelectorAll(
-      ".examples__player-composition-cover-button"
+      ".examples__player-composition-inner"
     );
     coverButtons.forEach((button) => {
       button.addEventListener("click", (e) => {
@@ -399,7 +399,7 @@ class AudioPlayer {
 
   updateUIState() {
     const allButtons = this.container.querySelectorAll(
-      ".examples__player-composition-cover-button"
+      ".examples__player-composition-inner"
     );
 
     allButtons.forEach((button) => {

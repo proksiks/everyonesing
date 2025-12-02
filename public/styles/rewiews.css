@@ -52,6 +52,7 @@
   font-size: 2.25rem;
   color: var(--color-red);
   margin-top: 0.75rem;
+  line-height: 1.1;
 }
 @media (max-width: 1024px) {
   .reviews__head-text {

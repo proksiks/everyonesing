@@ -18,6 +18,10 @@ new Swiper(".main-slider", {
     nextEl: ".main-slider__button--next",
     prevEl: ".main-slider__button--prev",
   },
+  pagination: {
+    el: ".main-slider-pagination",
+    clickable: true,
+  },
   thumbs: {
     swiper: textSlider,
   },
