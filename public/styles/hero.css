@@ -76,6 +76,23 @@
   position: absolute;
   inset: 0;
 }
+
+.hero__video_pc {
+  display: block;
+}
+.hero__video_m {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero__video_pc {
+    display: none;
+  }
+  .hero__video_m {
+    display: block;
+  }
+}
+
 .hero__video::before {
   content: "";
   position: absolute;
